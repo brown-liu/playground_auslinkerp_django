@@ -19,7 +19,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 from app import views
-import wechat_django.sites.wechat
+
 
 urlpatterns = [
     url('^admin/', admin.site.urls),
