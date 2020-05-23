@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>{{h1title}}</h1>
+<h2>Existing Staff Member</h2>
+
+<ul> {% for staff in show_staff %}
+    <li> NAME : {{staff.s_name }}---STAFF ID : {{staff.id }}---Mobile:{{staff.s_mobilenumber }}</li>
+    {% endfor %}
+
+
+</ul>
+<br>
+<hr>
+<br>
+<h2>Remove Staff by ID</h2>
+<form class="ui form" action="{% url 'staff_user:removestaff'%}" method="post">
+    <input type="text" name="id_number" placeholder="ID Number" style="width: 20%;display: flex">
+    <button class="ui button" type="submit">Remove STAFF by ID :</button>
+</form>
+<br>
+<hr>
+<br>
+<h2>Add New Staff</h2>
+<div class="register_container">
+    <form method='post' class="ui form" action="{% url 'staff_user:register' %}"> {% csrf_token %}
+        <div class="field">
+            <h5>Please Enter Details</h5>
+
+            <label>NAME</label> <input type="text" name="username" placeholder="User name"
+                                       style="width: 20%;display: flex">
+            <label>Mobile</label> <input type="text" name="mobile_number" placeholder="mobile number without space"
+                                         style="width: 20%;display: flex">
+            <button class="ui button" type="submit">Submit</button>
+            <hr>
+
+            {% endblock %}

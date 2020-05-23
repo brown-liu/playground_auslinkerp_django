@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<label> To hold client service=> select from client and press confirm selection.</label>
+
+<!--下拉菜单 ==> go to -->
+<form action="{% url 'searchposted'%}" method="get">
+    <select class="ui fluid dropdown" name='ClientSelected'>
+
+        {% for item in company%}
+        <option>{{item.c_name}}</option>
+        {% endfor %}
+
+
+    </select>
+
+    <button class="ui primary button" type="submit">
+        Select to add restriction
+    </button>
+</form>
+
+
+<form action="{% url 'searchposted'%}" method="get">
+    <label>On Hold List</label>
+    <select class="ui fluid dropdown" name='ClientSelected'>
+
+        {% for item in company_ishold%}
+        <option value="{{item.c_name}}">{{item.c_name}}</option>
+        {% endfor %}
+    </select>
+    <button class="ui primary button" type="submit">
+        Select client to remove restriction
+    </button>
+</form>
+
+
+</select>
+
+<form action="{% url 'change_onhold_status' %}" method="post">{% csrf_token %}
+    <div class="ui message">
+        {% for i in result%}
+        <input class="header" name="company name" display="none" value="{{ i.c_name}}">
+
+        {{ i.c_name}}
+        </input>
+
+        <strong>
+            <ul class="list">
+                <li>Company Name : {{i.c_name}}</li>
+                <!--                <li>Contact person : {{i.clientCompanyContactPerson }}</li>-->
+                <li>Database ID : {{ i.c_id }}</li>
+
+                <li>Mobile: {{ i.c_telephone}}</li>
+                <li>Email: {{i.c_email}}</li>
+                <li> Service Onhold Status: {{i.c_active }}</li>
+
+            </ul>
+        </strong> {% endfor %}
+        <button class="ui secondary button" type="submit"> Update Status</button>
+    </div>
+
+    {% endblock %}

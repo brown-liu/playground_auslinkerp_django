@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auslink ERP</title>
+</head>
+<body>
+<h1>Staff Time Record</h1>
+
+
+<form action="{% url 'warehouse:working_time'%}" method="post">
+
+    <ul>
+        <select name="person">
+            {% for person in staff %}
+            <option> {{ person.u_username }}</option>
+            {% endfor %}
+        </select>
+
+
+    </ul>
+    <button type="submit">Select</button>
+</form>
+<form action="{% url 'warehouse:changetime'%}" method="post">
+    <ul> {% for item in staff_selected %} <input type="text" name="staffname" value="{{item.u_username}}">
+        <li> {{item.start_time}}</li>
+        <input type="text" name="starttime" placeholder="hh:mm">
+        <li> {{item.end_time}}</li>
+        <input type="text" name="endtime" placeholder="hh:mm">
+    </ul>
+    {% endfor%}
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
+

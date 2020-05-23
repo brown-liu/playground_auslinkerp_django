@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Import Files To System</h1>
+
+
+<h2> Update Customer Stock Report </h2>
+<ul>
+    <li>Download Customer Stock Report with add-on option [LOCATION] only</li>
+    <li>Make sure keep the first row,like customer/code/product name etc...</li>
+    <li>Please use EXCEL filter and keep East Tamaki Locations ONLY</li>
+    <li>Save final file to csv format before upload</li>
+</ul>
+</form>
+
+<div style="width:800px;height:160px">
+    <img style="width:700px;height:120px" src="/static/imgs/customerstockreport.png">
+</div>
+
+<form action="{% url 'uploadfile_customer_stock'%}" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <div class="ui middle aligned center aligned grid container">
+        <div class="ui fluid segment">
+
+            <input type="file" (change)="fileEvent($event)" class="inputfile" id="fileinput" name="document"/>
+
+            <label for="fileinput" class="ui huge green right floated button">
+                <i class="ui upload icon"></i>
+                Select CSV File
+            </label>
+            <button class="ui button " type="submit"> Upload NOW</button>
+        </div>
+
+    </div>
+    <br>
+    <hr>
+</form>
+<h2>Bluk import Customer information </h2>
+<ul>
+    <li>Go to Contacts => More =>Export CSV</li>
+    <li>Import CartonCloud CSV client file to database</li>
+</ul>
+<div style="width:800px;height:200px">
+    <img style="width:600px;height:120px" src="/static/imgs/cartoncloud_customer_csv.png">
+</div>
+
+<form action="{% url 'uploadfile'%}" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <div class="ui middle aligned center aligned grid container">
+        <div class="ui fluid segment">
+
+            <input type="file" (change)="fileEvent($event)" class="inputfile" id="embedpollfileinput" name="document"/>
+
+            <label for="embedpollfileinput" class="ui huge green right floated button">
+                <i class="ui upload icon"></i>
+                Select CSV File
+            </label>
+            <button class="ui button " type="submit"> Upload NOW</button>
+        </div>
+
+    </div>
+    <br>
+    <hr>
+
+
+    <form>
+        <!--<div class="ui middle aligned center aligned grid container">-->
+        <!--    <div class="ui fluid segment">-->
+        <!--&lt;!&ndash;        <label>Existing Client Last 20</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;      <ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;          {% for i in list%}&ndash;&gt;-->
+        <!--&lt;!&ndash;          <li>{{i.c_name}}{{i.c_email}}</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;            {% endfor %}&ndash;&gt;-->
+        <!--&lt;!&ndash;      </ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+        <!--</div>-->
+    </form>
+
+    {% endblock %}
+

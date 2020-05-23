@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<H1>Successful</H1>
+
+<form action="/homepage">
+    <button class="ui primary button">Back to homepage</button>
+</form>
+
+<h1> HELLO {{username}} ! WELCOME TO AUSLINK</h1>
+
+
+</form>
+<div class="ui message">
+    <div class="header">
+        New Client Recorded
+    </div>
+    <ul class="list">{% csrf_token %}
+        {% for item in context %}
+        <li>{{item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

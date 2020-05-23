@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<th>CLIENT DATA ENTRY FORM</th>
+<form action="{% url 'success' %}" method="post" class="ui form">{% csrf_token %}
+
+    <div class="field">
+        <label for="name">Company Name:</label>
+        <input type="text" id="name" name="clientCompanyName">
+    </div>
+
+    <div class="field">
+        <label for="contactPerson">Contact Person:</label>
+        <input type="text" id="contactPerson" name="clientCompanyContactPerson">
+    </div>
+
+    <div class="field">
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="clientCompanyEmail">
+    </div>
+
+    <div class="field">
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="clientCompanyContactMobile">
+    </div>
+
+    <div class="field">
+        <label for="Address">Company address</label>
+        <input type="text" id="Address" name="clientCompanyAddress">
+    </div>
+
+    <div class="field">
+        <label for="NZBN"> NZBN</label>
+        <input type="text" id="NZBN" name="NZBN">
+    </div>
+    </div>
+    <button class="ui button" type="submit">Submit</button>
+    </div>
+
+
+</form>
+{% endblock %}

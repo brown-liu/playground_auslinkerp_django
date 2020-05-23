@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--view===>app.view-->
+<div class="ui red message">
+    <div class="header">
+        <h1>Service STOP list! DO NOT RELEASE GOODS!</h1>
+    </div>
+    <ul class="list"> {% for item in company %}
+        <li style="font-size: x-large"> {{item.c_name}}
+            <hr>
+        </li>
+        {% endfor %}
+
+    </ul>
+    <strong>{{suspend_client.c_name}}<strong>{{message}}</strong></strong>
+</div>
+
+
+<div class="ui message">
+    <div class="header">
+        <h1>Container schedule</h1>
+    </div>
+
+
+    <ul class="list"> {% for item in container %}
+        <li style="font-size: large"><p> ETA to Yard&nbsp;&nbsp:&nbsp;&nbsp<strong>{{ item.ctnr_eta}}</strong>&nbsp;&nbsp;&nbsp
+            {{item.ctnr_number}} &nbsp;&nbsp;&nbsp;&nbsp({{item.ctnr_type}})&nbsp;&nbsp;&nbsp;&nbsp{{item.ctnr_owner}}
+            &nbsp;&nbsp;&nbsp;&nbsp JOB&nbsp;&nbsp;:&nbsp {{item.ctnr_job}}&nbsp;&nbsp;&nbsp{{item.ctnr_special}}</p>
+            <hr>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<div class="ui message">
+    <div class="header">
+        <h1>Incoming Shipment</h1>
+    </div>
+    <ul class="list"> {% for item in incoming_shipment %}
+        <li style="font-size: x-large"> {{item.clientCompanyName}}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="ui message">
+    <div class="header">
+        <h1>Staff on Site Now</h1>
+    </div>
+    <ul class="list"> {% for item in staffonsite %}
+        <li style="font-size: x-large"> {{item.clientCompanyName}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+</div>
+<!--<div>-->
+<!--    <form action="/setcompanystatus" method="get">-->
+
+<!--        <button type="submit" class="ui primary button"> Company Settings</button>-->
+
+<!--    </form>-->
+<!--    <form action="/clientdataentry" method="get">-->
+<!--        <button type="submit" class="ui primary button">Client Data Entry</button>-->
+
+<!--    </form>-->
+
+<!--</div>-->
+
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AUSLINK WORK TIME MANAGEMENT</title>
+</head>
+<body>
+<h1> Welcome To the login page</h1>
+<h3>{{h3title}}</h3>
+<ul>{% for staff in working%}
+    <li>{{staff.s_name}} is on duty!</li>
+    {% endfor %}
+</ul>
+
+<h4>Please enter your mobile number and submit</h4>
+
+<form action="{% url 'staff_user:startwork'%}" method="post">
+    <input name="mobile_number" type="text">
+    <button type="submit">Click to Start or STOP</button>
+
+
+</form>
+</body>
+</html>

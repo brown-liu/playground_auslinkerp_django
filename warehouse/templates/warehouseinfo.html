@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+{% load nvd3_tags %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<link href="{% static 'nvd3/src/nv.d3.css' %}" media="all" rel="stylesheet" type="text/css"/>
+<script src="{% static '/d3/d3.min.js' %}" type="text/javascript"></script>
+<script src="{% static '/nvd3/nv.d3.min.js' %}" type="text/javascript"></script>
+
+
+{% load nvd3_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% include_chart_jscss %}
+    {% load_chart charttype chartdata chartcontainer extra %}
+    {% load_chart charttype chartdata "piechart_container" extra %}
+
+    <!----------------------------------以下是客户对应库位使用情况-------------------------------------------------------------------------->
+    <div>
+        <ul>
+            {% for key,value in current_location_dict.items %}
+            <li> {{key}} <strong style="color: #2ca02c"> {{value}} Locations </strong></li>
+
+            {% endfor%}
+            <li>Empty Locations = <strong style="color: #d62728">{{empty_location}}</strong></li>
+        </ul>
+
+
+    </div>
+    <!------------------------------------------一下是下拉菜单选择时间------------------------------------------------------------->
+    <div>
+        <label>Date to display</label>
+        <select class="ui dropdown">
+
+            {% for item in all_time_stamp %}
+            <option value="{{item}}">{{item.l_time}}</option>
+
+            {% endfor %}
+
+        </select>
+
+    </div>
+    <!------------------------------------------------以下是piechart for current---------------------------------------------------->
+
+</head>
+<body>
+
+
+<h1>Warehouse Locations Status- {{timestamp}}</h1>
+<div>
+
+    {% include_container chartcontainer 600 800 %}
+</div>
+
+<!------------------------------------------------以下是historical chart---------------------------------------------------->
+
+
+</body>
+</html>

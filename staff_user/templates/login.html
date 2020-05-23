@@ -1,0 +1,27 @@
+{% extends 'base_user.html' %}
+{% load static %}
+{% block content%}
+
+<h1>{{h1title}}</h1>
+<h2>{{h2title}}</h2>
+<div class="register_container">
+    <form method='post' class="ui form" action="{% url 'staff_user:login' %}"> {% csrf_token %}
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="User name">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+
+</div>
+<hr>
+<form action="{% url 'staff_user:register'%}" method="get">
+    <label>First Time here?</label>
+    <button class="ui primary button">Go to Register Page</button>
+</form>
+
+{% endblock %}

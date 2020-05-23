@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content  %}
+<h1> Container Register page </h1>
+<form action="{% url 'warehouse:container_upload_info' %}" method="post"> {% csrf_token %}
+    <div class="ui form">
+        <div class="fields">
+            <div class="field">
+                <label>Container Number</label>
+                <input name="ctnr_number" placeholder="Container Number" type="text">
+
+                <div class="ui form">
+
+                    <div class=" field">
+                        <label>Client Name</label>
+                        <select name="ctnr_owner">
+                            <option value="FAK">FAK</option>
+                            {% for client in container_client%}
+                            <option value="{{client.c_name}}"> {{client.c_name}}</option>
+                            {% endfor %}
+
+
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class=" fields">
+            <label>Capacity</label>
+
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input checked="checked" name="ctnr_type" type="radio" value="20FT">
+                    <label> 20FT </label>
+                </div>
+            </div>
+            <div class=" fields">
+                <div class="ui radio checkbox">
+                    <input name="ctnr_type" type="radio" value="40FT">
+                    <label> 40FT </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Job required</label>
+            <input name="ctnr_job" type="text">
+        </div>
+        <div class="field">
+            <label>Special Instruction</label>
+            <input name="ctnr_special" type="text">
+        </div>
+        <div class="field">
+            <label>ETA to Ausklink</label>
+            <input name="ctnr_eta" type="date">
+        </div>
+    </div>
+
+    <button class="ui primary button" type="submit">
+        Save
+    </button>
+</form>
+
+
+{% endblock %}
