@@ -3,7 +3,6 @@ from warehouse.models import carton_cloud_client
 from warehouse.models import containers
 
 
-# @login_required(login_url='staff_user:login')
 def homepage(request):
     company = carton_cloud_client.objects.filter(c_active=0)
     companylist = company.values()

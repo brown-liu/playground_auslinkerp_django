@@ -77,7 +77,7 @@ def work(request):
         data = {
             'message': "Great, Let's WORK",
             'staff_name': person.s_name,
-            'notice': "Please Don't forget to log off at end of the day"
+            'notice': "Please Don't forget to log off when leave work!"
         }
         if hours.objects.filter(h_name=staff_name, record_date=date.today()).exists() == False:
             print("AAA")

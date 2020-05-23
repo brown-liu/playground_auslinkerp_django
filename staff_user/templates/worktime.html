@@ -39,7 +39,7 @@
 
 <div class="ui message">
     <div class="header">
-        <h1>Container schedule</h1>
+        <h2>Container schedule</h2>
     </div>
 
 
@@ -56,7 +56,7 @@
 
 <div class="ui message">
     <div class="header">
-        <h1>Incoming Shipment</h1>
+        <h2>Incoming Shipment</h2>
     </div>
     <ul class="list"> {% for item in incoming_shipment %}
         <li style="font-size: x-large"> {{item.clientCompanyName}}</li>
@@ -65,10 +65,10 @@
 </div>
 <div class="ui message">
     <div class="header">
-        <h1>Staff on Site Now</h1>
+        <h2>Staff on Site Now</h2>
     </div>
     <ul>{% for staff in working%}
-        <li>{{staff.s_name}} is on duty!</li>
+        <li><strong>{{staff.s_name}} </strong>is on site!</li>
         {% endfor %}
     </ul>
 </div>

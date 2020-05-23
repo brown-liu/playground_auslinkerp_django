@@ -36,8 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app', 'clientdatabases', 'adminandaccount',
-    'Daily_KPI', 'forwarding', 'warehouse', 'django_nvd3', 'djangobower', 'staff_user',
-    'wechat_django'
+    'Daily_KPI', 'forwarding', 'warehouse', 'django_nvd3', 'djangobower', 'staff_user'
 ]
 
 MIDDLEWARE = [
