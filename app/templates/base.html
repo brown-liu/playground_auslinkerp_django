@@ -38,7 +38,7 @@
 
                     <!--                    </div>-->
                 </div>
-                <div class="item"><a href="">Work Time</a></div>
+<!--                <div class="item"><a href="">Work Time</a></div>-->
                 <div class="item"><a href="{% url 'warehouse:containerregisterpage'%}">Inbound CTNR Register</a></div>
                 <div class="item"><a href="{% url 'warehouse:weeklychecksheet'%}" target="_blank">Weeky Check List</a>
                 </div>
@@ -97,7 +97,7 @@
         <i class="dropdown icon"></i>
         <div class="menu">
             <div class="header">Categories</div>
-            <div class="item">Staff Information</div>
+            <div class="item"><a href="{% url 'staff_user:staff_information'%}">Staff Information</a></div>
             <!--                <div class="item">Bedroom</div>-->
             <div class="item">
                 <!--                    <i class="dropdown icon"></i>-->
@@ -110,7 +110,7 @@
 </div>
 
 </div>
-{% block content%}
+{% block content %}
 {% endblock %}
 </body>
 </html>

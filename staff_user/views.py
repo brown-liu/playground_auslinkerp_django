@@ -1,8 +1,10 @@
+import time
+
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from staff_user.models import staff, hours
-import datetime
+from datetime import datetime, date
 
 
 def register(request):
@@ -64,44 +66,95 @@ def worktime(request):
 # start and stop work
 
 def work(request):
-    try:
+    # try:
 
-        number = request.POST.get('mobile_number')
-        person = staff.objects.get(s_mobilenumber=number)
-        staff_name = person.s_name
+    number = request.POST.get('mobile_number')
+    person = staff.objects.get(s_mobilenumber=number)
+    staff_name = person.s_name
 
-        if person.s_isworking == False:
-            person.s_isworking = True
-            data = {
-                'message': "Great, Let's WORK",
-                'staff_name': person.s_name,
-                'notice': "Please Don't forget to log off at end of the day"
-            }
-            if hours.objects.filter(h_name=staff_name, record_date=datetime.date.today()).exists() == False:
-                print("AAA")
-                staff_hour = hours()
-                staff_hour.h_name = staff_name
-                staff_hour.save()
+    if person.s_isworking == False:
+        person.s_isworking = True
+        data = {
+            'message': "Great, Let's WORK",
+            'staff_name': person.s_name,
+            'notice': "Please Don't forget to log off at end of the day"
+        }
+        if hours.objects.filter(h_name=staff_name, record_date=date.today()).exists() == False:
+            print("AAA")
+            staff_hour = hours()
+            staff_hour.h_name = staff_name
+            staff_hour.save()
 
-            else:
-                pass
+        else:
+            pass
 
-        elif person.s_isworking == True:
-            person.s_isworking = False
-            person_hour = hours.objects.get(h_name=staff_name, record_date=datetime.date.today())
-            person_hour.end_time = datetime.datetime.now()
-            # person_hour.hours_today = (person_hour.end_time - person_hour.start_time).seconds / 3600
-            print(type(person_hour.end_time))
-            print(person_hour.end_time)
-            person_hour.save()
+    elif person.s_isworking == True:
+        person.s_isworking = False
+        person_hour = hours.objects.get(h_name=staff_name, record_date=date.today())
+        endtime = datetime.now()
+        person_hour.end_time = str(endtime)
+        person_hour.save()
+        str_starttime = person_hour.start_time
+        starttime = datetime.strptime(str_starttime, "%Y-%m-%d %H:%M:%S.%f")
+        print(endtime)
+        print(type(endtime))
+        print(starttime)
+        print(type(starttime))
 
-            data = {
-                'message': "Have a good rest, See you",
-                'staff_name': person.s_name,
-            }
+        person_hour.hours_today = endtime - starttime
+        person_hour.save()
 
-        person.save()
+        data = {
+            'message': "Have a good rest, See you",
+            'staff_name': person.s_name,
+        }
 
-        return render(request, "thank you.html", context=data)
-    except Exception as e:
-        return HttpResponse("Wrong number entered. please make sure no space between numbers!" + str(e))
+    person.save()
+
+    return render(request, "thank you.html", context=data)
+
+
+# except Exception as e:
+# return HttpResponse("Wrong number entered. please make sure no space between numbers!" + str(e))
+
+# end time=2020-05-23 20:39:55.555596
+# starttime=20:19:20.640904
+# return int
+# def timedifference(str_endtime,str_starttime):
+#     str1=str_starttime
+#     x=str1.split(':')
+#     xH=int(x[0])
+#     xM=int(x[1])
+#     str2 = str_endtime
+#     y = str2.split(' ')
+#     y1 = y[1].split(':')
+#     yH = int(y1[0])
+#     yM = int(y1[1])
+#
+#     if yM>xM:
+#         int_H=yH-xH
+#         m_diff=yM-xM
+#     else:
+#         m_diff = yM + 60 - xM
+#         int_H = yH - xH - 1
+#
+#     int_M=m_diff/60
+#     return (int_H+int_M)
+#
+def staff_information(request):
+    staff_all = staff.objects.all()
+    staff_all_values = staff_all.values()
+
+    staff_onduty = staff.objects.filter(s_isworking=1)
+    staff_onduty_values = staff_onduty.values()
+
+    staff_hour = hours.objects.all()
+    staff_hour_values = staff_hour.values()
+
+    data = {
+        'stafflist': staff_all_values,
+        'staff_onduty': staff_onduty_values,
+        'hours': staff_hour_values
+
+    }
+    return render(request, 'staff_information.html', context=data)

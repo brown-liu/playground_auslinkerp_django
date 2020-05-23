@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^removestaff/', views.removestaff, name='removestaff'),
     url(r'^worktime/', views.worktime, name='worktime'),
     url(r'^work/', views.work, name='startwork'),
+    url(r'^staffinformation', views.staff_information, name='staff_information')
 
 ]

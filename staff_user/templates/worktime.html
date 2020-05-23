@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css">
+    <script src="/static/js/common.js"></script>
+
     <meta charset="UTF-8">
     <title>AUSLINK WORK TIME MANAGEMENT</title>
 </head>
 <body>
 <h1> Welcome To the login page</h1>
 <h3>{{h3title}}</h3>
-<ul>{% for staff in working%}
-    <li>{{staff.s_name}} is on duty!</li>
-    {% endfor %}
-</ul>
+
 
 <h4>Please enter your mobile number and submit</h4>
 
@@ -20,5 +22,58 @@
 
 
 </form>
+<div class="ui red message">
+    <div class="header">
+        <h1>Service STOP list! DO NOT RELEASE GOODS!</h1>
+    </div>
+    <ul class="list"> {% for item in company %}
+        <li style="font-size: x-large"> {{item.c_name}}
+            <hr>
+        </li>
+        {% endfor %}
+
+    </ul>
+    <strong>{{suspend_client.c_name}}<strong>{{message}}</strong></strong>
+</div>
+
+
+<div class="ui message">
+    <div class="header">
+        <h1>Container schedule</h1>
+    </div>
+
+
+    <ul class="list"> {% for item in container %}
+        <li style="font-size: large"><p> ETA to Yard&nbsp;&nbsp:&nbsp;&nbsp<strong>{{ item.ctnr_eta}}</strong>&nbsp;&nbsp;&nbsp
+            {{item.ctnr_number}} &nbsp;&nbsp;&nbsp;&nbsp({{item.ctnr_type}})&nbsp;&nbsp;&nbsp;&nbsp{{item.ctnr_owner}}
+            &nbsp;&nbsp;&nbsp;&nbsp JOB&nbsp;&nbsp;:&nbsp {{item.ctnr_job}}&nbsp;&nbsp;&nbsp{{item.ctnr_special}}</p>
+            <hr>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<div class="ui message">
+    <div class="header">
+        <h1>Incoming Shipment</h1>
+    </div>
+    <ul class="list"> {% for item in incoming_shipment %}
+        <li style="font-size: x-large"> {{item.clientCompanyName}}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="ui message">
+    <div class="header">
+        <h1>Staff on Site Now</h1>
+    </div>
+    <ul>{% for staff in working%}
+        <li>{{staff.s_name}} is on duty!</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+</div>
 </body>
 </html>

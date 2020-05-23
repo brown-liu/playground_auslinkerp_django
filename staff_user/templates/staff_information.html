@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h1>Staff Information Page</h1>
+
+<h3> Staff is On Duty Now </h3>
+<div>
+    <ul> {% for staff in staff_onduty%}
+        <li> Staff<strong> {{staff.s_name}} </strong> is On Duty Now!</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<br>
+<hr>
+<br>
+
+
+<h3> Staff List & Contact</h3>
+<div>
+    <ul> {% for staff in stafflist %}
+
+        <li> {{staff.s_name}} {{staff.s_mobilenumber}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<br>
+<hr>
+<br>
+
+<h3> Weekly Staff Hours </h3>
+<div>
+    <ul>
+        {% for staff in hours%}
+        <li> Staff {{staff.h_name}} Start {{staff.start_time}} End {{staff.end_time|slice:'10:'}} Total:
+            {{staff.hours_today|slice:':8'}}
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+
+{% endblock %}
