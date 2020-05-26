@@ -6,6 +6,8 @@ from django.urls import reverse
 from staff_user.models import staff, hours
 from datetime import datetime, date
 
+from warehouse.models import carton_cloud_client, containers
+
 
 def register(request):
     if request.method == 'GET':
@@ -47,26 +49,35 @@ def removestaff(request):
 
 
 def worktime(request):
-    try:
-        person = staff.objects.filter(s_isworking=True)
-        detail = person.values()
-        if person.exists():
-            print(person.exists)
-            data = {'working': detail,
-                    'h3title': 'Our team is working hard!'}
-            return render(request, 'worktime.html', context=data)
-        else:
-            data = {'h3title': ' You must be the first one! Or the last one here!'}
+    if request.method=="GET":
 
-            return render(request, 'worktime.html', context=data)
-    except Exception as e:
-        return HttpResponse(e)
+        try:
+            company = carton_cloud_client.objects.filter(c_active=0)
+            companylist = company.values()
+
+            container = containers.objects.all()
+            obj_dict = container.values()
+
+            person = staff.objects.filter(s_isworking=True)
+            detail = person.values()
+            if person.exists():
+                print(person.exists)
+                data = {'working': detail,
+                        "company": companylist,
+                        'container': obj_dict,
+                        'h3title': 'Our team is working hard!'}
+                return render(request, 'worktime.html', context=data)
+            else:
+                data = {'h3title': ' You must be the first one! Or the last one here!'}
+
+                return render(request, 'worktime.html', context=data)
+        except Exception as e:
+            return HttpResponse(e)
 
 
 # start and stop work
 
 def work(request):
-    # try:
 
     number = request.POST.get('mobile_number')
     person = staff.objects.get(s_mobilenumber=number)
@@ -80,7 +91,7 @@ def work(request):
             'notice': "Please Don't forget to log off when leave work!"
         }
         if hours.objects.filter(h_name=staff_name, record_date=date.today()).exists() == False:
-            print("AAA")
+
             staff_hour = hours()
             staff_hour.h_name = staff_name
             staff_hour.save()
@@ -96,10 +107,7 @@ def work(request):
         person_hour.save()
         str_starttime = person_hour.start_time
         starttime = datetime.strptime(str_starttime, "%Y-%m-%d %H:%M:%S.%f")
-        print(endtime)
-        print(type(endtime))
-        print(starttime)
-        print(type(starttime))
+
 
         person_hour.hours_today = endtime - starttime
         person_hour.save()

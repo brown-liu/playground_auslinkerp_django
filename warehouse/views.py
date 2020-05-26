@@ -47,7 +47,7 @@ def warehouseinfo(request):
     # 查找最新的记录 last（）
     current_location = location_used.objects.all().last()
     print(current_location)
-    if current_location!=None:
+    if current_location != None:
         current_location_string = current_location.l_details
         # print(current_location_string)
         current_location_dict = ast.literal_eval(current_location_string)
@@ -91,7 +91,6 @@ def warehouseinfo(request):
         return render_to_response('warehouseinfo.html', data)
     else:
         return HttpResponse('No infor yet')
-
 
 
 # East tamaki warehouse total pallets 594  16/05/2020
