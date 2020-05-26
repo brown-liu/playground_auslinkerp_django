@@ -14,14 +14,9 @@
 <h3>{{h3title}}</h3>
 
 
-<h4>Please enter your mobile number and submit</h4>
-
-<form action="{% url 'staff_user:startwork'%}" method="post">
-    <input name="mobile_number" type="text">
-    <button type="submit">Click to Start or STOP</button>
 
 
-</form>
+
 <div class="ui red message">
     <div class="header">
         <h1>Service STOP list! DO NOT RELEASE GOODS!</h1>
@@ -68,12 +63,18 @@
         <h2>Staff on Site Now</h2>
     </div>
     <ul>{% for staff in working%}
-        <li><strong>{{staff.s_name}} </strong>is on site!</li>
+        <li><strong style="color: #2ca02c">{{staff.s_name}} </strong>is on site!</li>
         {% endfor %}
     </ul>
 </div>
 
 
 </div>
+<h4>Please enter your mobile number and submit</h4>
+
+<form action="{% url 'staff_user:startwork'%}" method="post">
+    <input name="mobile_number" type="text">
+    <button type="submit">Click to Start or STOP</button>
+</form>
 </body>
 </html>

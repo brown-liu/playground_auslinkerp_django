@@ -46,47 +46,52 @@ def containerregister(request):
 def warehouseinfo(request):
     # 查找最新的记录 last（）
     current_location = location_used.objects.all().last()
-    current_location_string = current_location.l_details
-    # print(current_location_string)
-    current_location_dict = ast.literal_eval(current_location_string)
+    print(current_location)
+    if current_location!=None:
+        current_location_string = current_location.l_details
+        # print(current_location_string)
+        current_location_dict = ast.literal_eval(current_location_string)
 
-    # 遍历所有记录 找出所有时间点 这个是给下拉 显示的时间戳
-    all_location = location_used.objects.all()
-    all_time_stamp = all_location.values()
-    print(all_time_stamp)
-    xdata = []
-    ydata = []
-    for i in current_location_dict:
-        # print(i+'<==this is I')
-        xdata.append(i)
-        ydata.append(current_location_dict[i])
-    # 这个是给label 显示的时间戳
-    time_stamp = current_location.l_time
+        # 遍历所有记录 找出所有时间点 这个是给下拉 显示的时间戳
+        all_location = location_used.objects.all()
+        all_time_stamp = all_location.values()
+        print(all_time_stamp)
+        xdata = []
+        ydata = []
+        for i in current_location_dict:
+            # print(i+'<==this is I')
+            xdata.append(i)
+            ydata.append(current_location_dict[i])
+        # 这个是给label 显示的时间戳
+        time_stamp = current_location.l_time
 
-    xdata.append('Empty Location')
+        xdata.append('Empty Location')
 
-    empty_location = location_calc(ydata)
-    ydata.append(empty_location)
+        empty_location = location_calc(ydata)
+        ydata.append(empty_location)
 
-    chartdata = {'x': xdata, 'y': ydata}
-    charttype = "pieChart"
-    chartcontainer = 'piechart_container'
-    data = {
-        'timestamp': time_stamp,
-        'current_location_dict': current_location_dict,
-        'charttype': charttype,
-        'chartdata': chartdata,
-        'all_time_stamp': all_time_stamp,
-        'chartcontainer': chartcontainer,
-        'empty_location': empty_location,
-        'extra': {
-            'x_is_date': False,
-            'x_axis_format': '',
-            'tag_script_js': True,
-            'jquery_on_ready': False,
+        chartdata = {'x': xdata, 'y': ydata}
+        charttype = "pieChart"
+        chartcontainer = 'piechart_container'
+        data = {
+            'timestamp': time_stamp,
+            'current_location_dict': current_location_dict,
+            'charttype': charttype,
+            'chartdata': chartdata,
+            'all_time_stamp': all_time_stamp,
+            'chartcontainer': chartcontainer,
+            'empty_location': empty_location,
+            'extra': {
+                'x_is_date': False,
+                'x_axis_format': '',
+                'tag_script_js': True,
+                'jquery_on_ready': False,
+            }
         }
-    }
-    return render_to_response('warehouseinfo.html', data)
+        return render_to_response('warehouseinfo.html', data)
+    else:
+        return HttpResponse('No infor yet')
+
 
 
 # East tamaki warehouse total pallets 594  16/05/2020
