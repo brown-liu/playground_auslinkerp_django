@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function update() {
+        var xmlRequest;
+        if (window.ActiveXObject) {
+            // for IE 678 or lower version
+            xmlRequest = new ActiveXObject("Microsoft.XMLHTTP");
+        } else if (window.XMLHttpRequest) {
+            xmlRequest = new XMLHttpRequest();
+        }
+        alert(xmlRequest)
+    }
+</script>
+
+
+</body>
+</html>

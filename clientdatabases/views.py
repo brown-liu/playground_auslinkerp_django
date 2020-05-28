@@ -48,12 +48,12 @@ def uploadfile(request):  #
                 item = line.split(',')
                 print(item)
                 new_client = carton_cloud_client(
-                    c_id=item[0],
-                    c_name=item[1],
-                    c_email=item[2],
-                    c_telephone=item[3],
-                    c_customer_charge_name=item[4],
-                    c_active=item[5])
+                    c_id=item[0].strip('"'),
+                    c_name=item[1].strip('"'),
+                    c_email=item[2].strip('"'),
+                    c_telephone=item[3].strip('"'),
+                    c_customer_charge_name=item[4].strip('"'),
+                    c_active=item[5].strip('"'))
                 new_client.save()
 
             return render(request, 'success.html')

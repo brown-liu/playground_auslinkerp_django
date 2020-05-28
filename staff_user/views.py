@@ -54,8 +54,12 @@ def worktime(request):
         try:
             company = carton_cloud_client.objects.filter(c_active=0)
             companylist = company.values()
-
             container = containers.objects.all()
+            # if len(container)>20:
+            #     n=20
+            # else:
+            #     n = len(container)
+            container = containers.objects.all().exclude(ctnr_active=0)
             obj_dict = container.values()
 
             person = staff.objects.filter(s_isworking=True)
@@ -65,10 +69,13 @@ def worktime(request):
                 data = {'working': detail,
                         "company": companylist,
                         'container': obj_dict,
-                        'h3title': 'Our team is working hard!'}
+                        'h3title': 'Please check message board for update!'}
                 return render(request, 'worktime.html', context=data)
             else:
-                data = {'h3title': ' You must be the first one! Or the last one here!'}
+                data = {"company": companylist,
+                        'container': obj_dict,
+                        'h3title': 'Our team is working hard!',
+                        'h3title': ' No other staff is on site now!'}
 
                 return render(request, 'worktime.html', context=data)
         except Exception as e:
@@ -78,48 +85,48 @@ def worktime(request):
 # start and stop work
 
 def work(request):
-
     number = request.POST.get('mobile_number')
-    person = staff.objects.get(s_mobilenumber=number)
-    staff_name = person.s_name
+    try:
+        person = staff.objects.get(s_mobilenumber=number)
+        staff_name = person.s_name
 
-    if person.s_isworking == False:
-        person.s_isworking = True
-        data = {
-            'message': "Great, Let's WORK",
-            'staff_name': person.s_name,
-            'notice': "Please Don't forget to log off when leave work!"
-        }
-        if hours.objects.filter(h_name=staff_name, record_date=date.today()).exists() == False:
+        if person.s_isworking == False:
+            person.s_isworking = True
+            data = {
+                'message': "Great, Let's WORK",
+                'staff_name': person.s_name,
+                'notice': "Please Don't forget to log off when leave work!"
+            }
+            if hours.objects.filter(h_name=staff_name, record_date=date.today()).exists() == False:
 
-            staff_hour = hours()
-            staff_hour.h_name = staff_name
-            staff_hour.save()
+                staff_hour = hours()
+                staff_hour.h_name = staff_name
+                staff_hour.save()
 
-        else:
-            pass
+            else:
+                pass
 
-    elif person.s_isworking == True:
-        person.s_isworking = False
-        person_hour = hours.objects.get(h_name=staff_name, record_date=date.today())
-        endtime = datetime.now()
-        person_hour.end_time = str(endtime)
-        person_hour.save()
-        str_starttime = person_hour.start_time
-        starttime = datetime.strptime(str_starttime, "%Y-%m-%d %H:%M:%S.%f")
+        elif person.s_isworking == True:
+            person.s_isworking = False
+            person_hour = hours.objects.get(h_name=staff_name, record_date=date.today())
+            endtime = datetime.now()
+            person_hour.end_time = str(endtime)
+            person_hour.save()
+            str_starttime = person_hour.start_time
+            starttime = datetime.strptime(str_starttime, "%Y-%m-%d %H:%M:%S.%f")
 
+            person_hour.hours_today = endtime - starttime
+            person_hour.save()
 
-        person_hour.hours_today = endtime - starttime
-        person_hour.save()
+            data = {
+                'message': "Have a good rest, See you",
+                'staff_name': person.s_name,
+            }
 
-        data = {
-            'message': "Have a good rest, See you",
-            'staff_name': person.s_name,
-        }
-
-    person.save()
-
-    return render(request, "thank you.html", context=data)
+        person.save()
+        return render(request, "thank you.html", context=data)
+    except:
+        return HttpResponse("Staff with this number does not exist! Please Go back")
 
 
 # except Exception as e:

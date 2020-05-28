@@ -14,11 +14,18 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Auslink ERP</title>
+    <style>
+        body {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+    </style>
 </head>
 <body onload="startTime()">
 
 <div class="ui menu" id="menumain">
-    <font color="113F1FF"><span id="nowDateTimeSpan"></span></font>
+    <font color="#8b0000"><span id="nowDateTimeSpan"></span></font>
     <div class="menu">
         <a class="active item" href="{% url 'homepage'%}">
             Dash Board
@@ -30,18 +37,12 @@
             <i class="dropdown icon"></i>
             <div class="menu">
                 <div class="header"></div>
-                <div class="item">
-                    <!--                    <i class="dropdown icon"></i>-->
-                    <span class="text"><a href="{% url 'warehouse:warehouseinfo' %}">Warehouse Status </a></span>
-                    <!--                    <div class="menu">-->
-                    <!--                        <div class="header">Mens</div>-->
-
-                    <!--                    </div>-->
-                </div>
-<!--                <div class="item"><a href="">Work Time</a></div>-->
-                <div class="item"><a href="{% url 'warehouse:containerregisterpage'%}">Inbound CTNR Register</a></div>
+                <div class="item"><a href="{% url 'warehouse:containerregisterpage'%}">Container Register</a></div>
                 <div class="item"><a href="{% url 'warehouse:weeklychecksheet'%}" target="_blank">Weeky Check List</a>
                 </div>
+                <div class="item"><span class="text"><a href="{% url 'warehouse:warehouseinfo' %}">Warehouse Status </a></span>
+                </div>
+
             </div>
         </div>
         <!---------------------------------------------------Client Databases-------------------------------------------------->
@@ -73,7 +74,7 @@
         <!--        </a>-->
         <!----------------------------------------------Forwarding------------------------------------------------------------->
         <div class="ui simple dropdown item">
-            <a href="{% url 'fwdhp' %}"> Clock in and Clock Out</a>
+            <a href="{% url 'staff_user:worktime' %}" target="_blank"> Clock in and Clock Out</a>
             <!--            <i class="dropdown icon" ></i>-->
             <!--            <div class="menu">-->
             <!--                <div class="header">Categories</div>-->

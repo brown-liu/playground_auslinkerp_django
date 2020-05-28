@@ -3,10 +3,10 @@
 <!--view===>app.view-->
 <div class="ui red message">
     <div class="header">
-        <h1>Service STOP list! DO NOT RELEASE GOODS!</h1>
+        <h3>Service STOP list! DO NOT RELEASE GOODS!</h3>
     </div>
     <ul class="list"> {% for item in company %}
-        <li style="font-size: x-large"> {{item.c_name}}
+        <li style="font-size: medium"> {{item.c_name}}
             <hr>
         </li>
         {% endfor %}
@@ -18,12 +18,12 @@
 
 <div class="ui message">
     <div class="header">
-        <h1>Container schedule</h1>
+        <h3>Container schedule </h3>
     </div>
 
 
-    <ul class="list"> {% for item in container %}
-        <li style="font-size: large"><p> ETA to Yard&nbsp;&nbsp:&nbsp;&nbsp<strong>{{ item.ctnr_eta}}</strong>&nbsp;&nbsp;&nbsp
+    <ul class="list"> {% for item in container|dictsort:'ctnr_eta' %}
+        <li style="font-size: medium"><p> ETA to Yard&nbsp;&nbsp:&nbsp;&nbsp<strong>{{ item.ctnr_eta}}</strong>&nbsp;&nbsp;&nbsp
             {{item.ctnr_number}} &nbsp;&nbsp;&nbsp;&nbsp({{item.ctnr_type}})&nbsp;&nbsp;&nbsp;&nbsp{{item.ctnr_owner}}
             &nbsp;&nbsp;&nbsp;&nbsp JOB&nbsp;&nbsp;:&nbsp {{item.ctnr_job}}&nbsp;&nbsp;&nbsp{{item.ctnr_special}}</p>
             <hr>
@@ -35,7 +35,7 @@
 
 <div class="ui message">
     <div class="header">
-        <h1>Incoming Shipment</h1>
+        <h3>Incoming Shipment</h3>
     </div>
     <ul class="list"> {% for item in incoming_shipment %}
         <li style="font-size: x-large"> {{item.clientCompanyName}}</li>
@@ -44,10 +44,11 @@
 </div>
 <div class="ui message">
     <div class="header">
-        <h1>Staff on Site Now</h1>
+        <h3>Staff on Site Now</h3>
     </div>
-    <ul class="list"> {% for item in staffonsite %}
-        <li style="font-size: x-large"> {{item.clientCompanyName}}</li>
+
+    <ul>{% for staff in working%}
+        <li><strong style="color: #2ca02c">{{staff.s_name}} </strong>is on site!</li>
         {% endfor %}
     </ul>
 </div>

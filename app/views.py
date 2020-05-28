@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+from staff_user.models import staff
 from warehouse.models import carton_cloud_client
 from warehouse.models import containers
 
@@ -7,13 +9,21 @@ def homepage(request):
     company = carton_cloud_client.objects.filter(c_active=0)
     companylist = company.values()
 
-    container = containers.objects.all()
+    # container = containers.objects.all()
+    # if len(container) > 20:
+    #     n = 20
+    # else:
+    #     n = len(container)
+    container = containers.objects.all().order_by("-id").exclude(ctnr_active=0)
     obj_dict = container.values()
-    print(obj_dict)
+
+    person = staff.objects.filter(s_isworking=True)
+    detail = person.values()
 
     context = {
         "company": companylist,
-        'container': obj_dict
+        'container': obj_dict,
+        'working': detail
     }
     return render(request, 'homepage.html', context=context)
 

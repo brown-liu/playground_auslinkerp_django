@@ -3,54 +3,117 @@
 {% load nvd3_tags %}
 <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-<link href="{% static 'nvd3/src/nv.d3.css' %}" media="all" rel="stylesheet" type="text/css"/>
+<link href="{% static 'nvd3/build/nv.d3.css' %}" media="all" rel="stylesheet" type="text/css"/>
 <script src="{% static '/d3/d3.min.js' %}" type="text/javascript"></script>
-<script src="{% static '/nvd3/nv.d3.min.js' %}" type="text/javascript"></script>
+<script src="{% static '/nvd3/build/nv.d3.min.js' %}" type="text/javascript"></script>
 
 
 {% load nvd3_tags %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Warehouse Information</title>
 
     {% include_chart_jscss %}
     {% load_chart charttype chartdata chartcontainer extra %}
     {% load_chart charttype chartdata "piechart_container" extra %}
 
-    <!----------------------------------以下是客户对应库位使用情况-------------------------------------------------------------------------->
-    <div>
-        <ul>
-            {% for key,value in current_location_dict.items %}
-            <li> {{key}} <strong style="color: #2ca02c"> {{value}} Locations </strong></li>
+    <script type="text/javascript">
 
-            {% endfor%}
-            <li>Empty Locations = <strong style="color: #d62728">{{empty_location}}</strong></li>
-        </ul>
+        function xx() {
+
+            var request = new XMLHttpRequest();
+            var url = "{% url 'warehouse:update_time_stamp' %}";
+            var method = 'post';
+            var obj = document.getElementById("sid");
+            var newdate = document.getElementById("newdate");
+            var olddate = obj.value.toString();
+            var updatedate = newdate.value.toString();
+            // alert(olddate+updatedate);
+
+            request.open(method, url);
+            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            var file = {"A": olddate, "B": updatedate}
+            request.send(JSON.stringify(file));
+            alert("Change is done!")
+
+            return false;
+
+        }
+
+    </script>
 
 
-    </div>
-    <!------------------------------------------一下是下拉菜单选择时间------------------------------------------------------------->
-    <div>
-        <label>Date to display</label>
-        <select class="ui dropdown">
-
-            {% for item in all_time_stamp %}
-            <option value="{{item}}">{{item.l_time}}</option>
-
-            {% endfor %}
-
-        </select>
-
-    </div>
     <!------------------------------------------------以下是piechart for current---------------------------------------------------->
 
 </head>
+<!------------------------------------------一下是下拉菜单选择时间------------------------------------------------------------->
 <body>
+<div style="float: left;margin: 10px 10px;width: 35%">
+    <div style="margin:2px; width: 220px">
+        <label>Date to display</label>
 
 
-<h1>Warehouse Locations Status- {{timestamp}}</h1>
-<div>
+        <form action="{% url " warehouse:update_chart
+        " %}" class="ui form" method="post">
+        <div style="margin-bottom: 2px;">
+            <select class="ui dropdown" id="sid" name='display'>
+
+                {% for item in all_time_stamp %}
+                <option selected value="{{ item.l_time }}">{{ item.l_time }}</option>
+
+                {% endfor %}
+
+            </select>
+        </div>
+        <button class="ui primary button" type="submit"> Check Detail</button>
+        <hr>
+
+    </div>
+    <div style="margin-bottom: 4px;">
+        <label>If above date is not correct.update>>></label>
+        <input id="newdate" name="update" type="date">
+        <button class="ui primary button" onclick="xx()">Correct date for this Chart</button>
+    </div>
+    <!----------------------------------以下是客户对应库位使用情况-------------------------------------------------------------------------->
+    <div>
+        <table class="ui celled table" style="height: 200px;">
+            <thead>
+            <tr>
+
+                <th>Company Name</th>
+                <th>Location Used</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for key,value in current_location_dict.items%}
+            <tr>
+                <td> {{key}}</td>
+                <td style="color: #2ca02c"> {{value}}</td>
+                {% endfor%}
+
+            </tr>
+            </tbody>
+
+
+        </table>
+        <a>Empty Locations = <strong style="color: #d62728">{{empty_location}}</strong></a>
+
+    </div>
+
+</div>
+</form>
+
+</div>
+
+
+<button><a href="{%url 'homepage'%}">back to Homepage</a></button>
+
+<h1 style="text-align: center">Warehouse Locations Status- {{timestamp}}</h1>
+<div style="display: flex;float: left;">
 
     {% include_container chartcontainer 600 800 %}
 </div>

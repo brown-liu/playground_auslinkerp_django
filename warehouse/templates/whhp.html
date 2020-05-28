@@ -3,12 +3,13 @@
 <h1> Warehouse</h1>
 <div class="ui message">
     <div class="header">
-        <h1>Container schedule</h1>
+        <h1>Container schedule(Including Completed)</h1>
     </div>
-    <ul class="list"> {% for item in container %}
-        <li style="font-size: x-large"> {{item.ctnr_number}},{{item.ctnr_type}}
-            FT,{{item.ctnr_number}},{{item.ctnr_eta}},{{item.ctnr_owner}},{{item.ctnr_job}},{{item.ctnr_special}}
+    <ul class="list"> {% for item in container|dictsort:'ctnr_eta' %}
+        <li style="font-size: medium">{{item.ctnr_eta}}&nbsp;&nbsp;&nbsp; {{item.ctnr_number}}&nbsp;&nbsp;&nbsp;{{item.ctnr_type}}
+            &nbsp;&nbsp;&nbsp;{{item.ctnr_number}}&nbsp;&nbsp;{{item.ctnr_owner}}&nbsp;&nbsp;<strong>{{item.ctnr_job}}</strong>===>{{item.ctnr_active}}
         </li>
+        <hr>
         {% endfor %}
     </ul>
 </div>

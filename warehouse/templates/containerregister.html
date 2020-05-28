@@ -1,26 +1,64 @@
 {% extends 'base.html' %}
 {% block content  %}
-<h1> Container Register page </h1>
-<form action="{% url 'warehouse:container_upload_info' %}" method="post"> {% csrf_token %}
-    <div class="ui form">
-        <div class="fields">
-            <div class="field">
-                <label>Container Number</label>
-                <input name="ctnr_number" placeholder="Container Number" type="text">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+</script>
+<script type="text/javascript">
+    function show_info() {
 
-                <div class="ui form">
+        var obj = document.getElementById('container');
+        var result = obj.value;
 
-                    <div class=" field">
-                        <label>Client Name</label>
-                        <select name="ctnr_owner">
-                            <option value="FAK">FAK</option>
-                            {% for client in container_client%}
-                            <option value="{{client.c_name}}"> {{client.c_name}}</option>
-                            {% endfor %}
+        $.ajax({
+            url: '{% url 'warehouse: container_detail_ajax' %}',
+            type: "POST",
+            data: {'key': result},
+            success: function (data) {
+                document.getElementById('container_status1').innerHTML = data.c;
+                document.getElementById('container_status2').innerHTML = "ETA" + data.a;
+                document.getElementById('container_status3').innerHTML = data.d;
+                document.getElementById('container_status4').innerHTML = data.b;
+                document.getElementById('container_status5').innerHTML = data.e;
+            }
+        })
+    }
+
+    function update_container() {
+        var container = document.getElementById('container');
+        var ctnr_number = container.value;
+        $.ajax({
+            url: '{% url "warehouse:mark_job_done" %}',
+            type: "POST",
+            data: {"container_number": ctnr_number},
+            success: function () {
+                alert('Marked as completed');
+            }
+        })
+
+    }
+
+</script>
+<div style="width: 45%;float: left;border: 1px; padding: 30px 30px;">
+    <h3 style="color: black"> Container Register </h3>
+    <form action="{% url 'warehouse:container_upload_info' %}" method="post"> {% csrf_token %}
+        <div class="ui form">
+            <div class="fields">
+                <div class="field">
+                    <label>Container Number</label>
+                    <input name="ctnr_number" placeholder="Container Number" type="text">
+
+                    <div class="ui form">
+
+                        <div class=" field">
+                            <label>Client Name</label>
+                            <select name="ctnr_owner">
+                                <option value="FAK">FAK</option>
+                                {% for client in container_client%}
+                                <option value="{{client.c_name}}"> {{client.c_name}}</option>
+                                {% endfor %}
 
 
-                        </select>
-                    </div>
+                            </select>
+                        </div>
                 </div>
 
             </div>
@@ -42,24 +80,80 @@
             </div>
         </div>
 
-        <div class="field">
-            <label>Job required</label>
-            <input name="ctnr_job" type="text">
+            <div class="field">
+                <label>Job required</label>
+                <textarea name="ctnr_job" style="height: 30px">Brief instruction for jobs needs to be done. like ATF? devan only? plus delivery?
+            </textarea>
+            </div>
+            <div class="field">
+                <label>ETA to Ausklink</label>
+                <input name="ctnr_eta" type="date">
+            </div>
         </div>
-        <div class="field">
-            <label>Special Instruction</label>
-            <input name="ctnr_special" type="text">
-        </div>
-        <div class="field">
-            <label>ETA to Ausklink</label>
-            <input name="ctnr_eta" type="date">
-        </div>
-    </div>
 
-    <button class="ui primary button" type="submit">
-        Save
-    </button>
-</form>
+        <button class="ui primary button" type="submit">
+            Save
+        </button>
+    </form>
+
+</div>
+
+
+<div style="width: 45%;float: left;padding: 30px 30px;">
+    <div style="margin-bottom: 4px">
+        <h3 style="color: black"> Container Status Changes </h3>
+
+        <select id="container" class="ui selection dropdown" onchange="show_info()">
+            {% for item in container %}
+            <option>{{item.ctnr_number}}</option>
+
+            {% endfor %}
+
+        </select>
+        <!------------------------------------Mark job DoneMark job DoneMark job Done-BUTTON is here-------------------->
+        <button class="ui primary button" onclick="update_container()">Mark job Done</button>
+    </div>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, tr {
+            text-align: center;
+        }
+    </style>
+    <table style="width: 600px">
+
+        <tr>
+            <th>Client</th>
+            <th><p id="container_status1"></p></th>
+
+        </tr>
+        <tr>
+            <td>ETA</td>
+            <td><p id="container_status2"></p></td>
+
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><p id="container_status3"></p></td>
+
+        </tr>
+        <tr>
+            <td>Job</td>
+            <td><p id="container_status4"></p></td>
+
+        </tr>
+        <tr>
+            <td>status 0=job Done 1=not Done</td>
+            <td><p id="container_status5"></p></td>
+
+        </tr>
+
+    </table>
+
+
+</div>
 
 
 {% endblock %}
