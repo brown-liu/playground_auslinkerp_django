@@ -81,10 +81,10 @@ DATABASES = {
         # 'NAME': 'brown',
         # 'USER': 'django',
         # 'PASSWORD': 'django-user-password',
-        'NAME': 'new',
+        'NAME': 'auslink',
 
-        'USER': 'root',
-        'PASSWORD': 'Mo021907879',
+        'USER': 'django',
+        'PASSWORD': 'password',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }

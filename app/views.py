@@ -76,15 +76,16 @@ def change_onhold_status(request):
     client_temp = request.POST['company name']
     suspend_client = carton_cloud_client.objects.get(c_name=client_temp)
 
-    if suspend_client.c_active == str(1):
+    if suspend_client.c_active == "1":
         suspend_client.c_active = 0
         message = 'service on hold starts!'
         suspend_client.save()
         print('AA')
     else:
-        suspend_client.c_active = 1
+        suspend_client.c_active = "1"
         suspend_client.save()
         message = 'service restriction removed! '
+
     context = {
         'suspend_client': suspend_client,
         'message': message

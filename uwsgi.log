@@ -735,3 +735,1027 @@ spawned uWSGI worker 4 (pid: 5200, cores: 2)
 [pid: 5200|app: 0|req: 1/1] 127.0.0.1 () {44 vars in 765 bytes} [Tue May 26 17:57:36 2020] GET /staff_user/worktime/? => generated 1889 bytes in 672 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
 [pid: 5197|app: 0|req: 1/2] 127.0.0.1 () {48 vars in 876 bytes} [Tue May 26 17:58:11 2020] POST /staff_user/work/ => generated 316 bytes in 671 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
 [pid: 5195|app: 0|req: 1/3] 127.0.0.1 () {42 vars in 734 bytes} [Tue May 26 17:58:13 2020] GET /staff_user/worktime/? => generated 1505 bytes in 539 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May 29 13:22:17 2020] ***
+compiled with version: 7.5.0 on 29 May 2020 01:03:58
+os: Linux-5.3.0-53-generic #47~18.04.1-Ubuntu SMP Thu May 7 13:10:50 UTC 2020
+nodename: brown-HP-Compaq-Elite-8300-SFF
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/brown/PycharmProjects/auslinkerp
+writing pidfile to uwsgi.pid
+detected binary path: /home/brown/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/brown/PycharmProjects/auslinkerp-linux2nd
+chdir(): No such file or directory [core/uwsgi.c line 2623]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May 29 13:26:18 2020] ***
+compiled with version: 7.5.0 on 29 May 2020 01:03:58
+os: Linux-5.3.0-53-generic #47~18.04.1-Ubuntu SMP Thu May 7 13:10:50 UTC 2020
+nodename: brown-HP-Compaq-Elite-8300-SFF
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/brown/PycharmProjects/auslinkerp
+writing pidfile to uwsgi.pid
+detected binary path: /home/brown/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/brown/PycharmProjects/auslinkerp
+your processes number limit is 31154
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Python main interpreter initialized at 0x55c142045280
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c142045280 pid: 6441 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6441)
+spawned uWSGI worker 1 (pid: 6443, cores: 2)
+spawned uWSGI worker 2 (pid: 6444, cores: 2)
+spawned uWSGI worker 3 (pid: 6445, cores: 2)
+spawned uWSGI worker 4 (pid: 6448, cores: 2)
+Not Found: /homepages
+[pid: 6448|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 684 bytes} [Fri May 29 13:27:00 2020] GET /homepages => generated 3298 bytes in 294 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 6448|app: 0|req: 2/2] 127.0.0.1 () {40 vars in 651 bytes} [Fri May 29 13:27:03 2020] GET /homepage => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 115 bytes (1 switches on core 1)
+[pid: 6445|app: 0|req: 1/3] 127.0.0.1 () {40 vars in 653 bytes} [Fri May 29 13:27:03 2020] GET /homepage/ => generated 5936 bytes in 513 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6448|app: 0|req: 3/4] 192.168.1.67 () {40 vars in 581 bytes} [Fri May 29 13:27:59 2020] GET /homepage => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 115 bytes (1 switches on core 1)
+[pid: 6445|app: 0|req: 2/5] 192.168.1.67 () {40 vars in 583 bytes} [Fri May 29 13:27:59 2020] GET /homepage/ => generated 5936 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 6443|app: 0|req: 1/6] 192.168.1.67 () {40 vars in 583 bytes} [Fri May 29 13:28:05 2020] GET /homepage/ => generated 5936 bytes in 504 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 6443|app: 0|req: 2/7] 192.168.1.67 () {40 vars in 549 bytes} [Fri May 29 13:28:08 2020] GET /favicon.ico => generated 3307 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 6443|app: 0|req: 3/8] 192.168.1.67 () {42 vars in 650 bytes} [Fri May 29 13:28:11 2020] GET /staff_user/register/ => generated 6090 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 6444|app: 0|req: 1/9] 192.168.1.67 () {40 vars in 549 bytes} [Fri May 29 13:28:11 2020] GET /favicon.ico => generated 3307 bytes in 280 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 6443|app: 0|req: 4/10] 192.168.1.67 () {48 vars in 808 bytes} [Fri May 29 13:28:38 2020] POST /staff_user/register/ => generated 0 bytes in 45 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 6444|app: 0|req: 2/11] 192.168.1.67 () {44 vars in 691 bytes} [Fri May 29 13:28:38 2020] GET /staff_user/register/ => generated 6159 bytes in 235 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 6444|app: 0|req: 3/12] 192.168.1.67 () {48 vars in 808 bytes} [Fri May 29 13:28:44 2020] POST /staff_user/register/ => generated 0 bytes in 85 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 6448|app: 0|req: 4/13] 192.168.1.67 () {44 vars in 691 bytes} [Fri May 29 13:28:44 2020] GET /staff_user/register/ => generated 6225 bytes in 224 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6444|app: 0|req: 4/14] 192.168.1.67 () {48 vars in 808 bytes} [Fri May 29 13:29:19 2020] POST /staff_user/register/ => generated 0 bytes in 49 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 6445|app: 0|req: 3/15] 192.168.1.67 () {44 vars in 691 bytes} [Fri May 29 13:29:19 2020] GET /staff_user/register/ => generated 6293 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6445|app: 0|req: 4/16] 192.168.1.67 () {42 vars in 661 bytes} [Fri May 29 13:29:30 2020] GET /staff_user/worktime/ => generated 1659 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 6448|app: 0|req: 5/17] 192.168.1.67 () {48 vars in 798 bytes} [Fri May 29 13:29:35 2020] POST /staff_user/work/ => generated 363 bytes in 87 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>]>>
+[pid: 6445|app: 0|req: 5/18] 192.168.1.67 () {42 vars in 657 bytes} [Fri May 29 13:29:36 2020] GET /staff_user/worktime/ => generated 1750 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6444|app: 0|req: 5/19] 192.168.1.67 () {42 vars in 677 bytes} [Fri May 29 13:29:44 2020] GET /clientdatabases/importafile/ => generated 7705 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6444|app: 0|req: 6/20] 127.0.0.1 () {46 vars in 717 bytes} [Fri May 29 13:30:18 2020] GET /homepage => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 115 bytes (1 switches on core 1)
+[pid: 6443|app: 0|req: 5/21] 127.0.0.1 () {46 vars in 719 bytes} [Fri May 29 13:30:18 2020] GET /homepage/ => generated 6020 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 6448|app: 0|req: 6/22] 127.0.0.1 () {44 vars in 628 bytes} [Fri May 29 13:30:19 2020] GET /favicon.ico => generated 3304 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Internal Server Error: /clientdatabases/customerstockreport/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./clientdatabases/views.py", line 73, in uploadfile_customer_stock
+    csv_file = csv_file.drop_duplicates(subset=['Customer', 'Location'], keep='first')
+  File "/home/brown/.local/lib/python3.6/site-packages/pandas/core/frame.py", line 4811, in drop_duplicates
+    duplicated = self.duplicated(subset, keep=keep)
+  File "/home/brown/.local/lib/python3.6/site-packages/pandas/core/frame.py", line 4885, in duplicated
+    raise KeyError(diff)
+KeyError: Index(['Customer', 'Location'], dtype='object')
+[pid: 6444|app: 0|req: 7/23] 192.168.1.67 () {48 vars in 924 bytes} [Fri May 29 13:31:30 2020] POST /clientdatabases/customerstockreport/ => generated 72654 bytes in 123 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 6445|app: 0|req: 6/24] 192.168.1.67 () {42 vars in 663 bytes} [Fri May 29 13:31:49 2020] GET /setcompanystatus/ => generated 5892 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>]>>
+[pid: 6445|app: 0|req: 7/25] 192.168.1.67 () {42 vars in 658 bytes} [Fri May 29 13:32:30 2020] GET /staff_user/worktime/ => generated 1750 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6444|app: 0|req: 8/26] 192.168.1.67 () {42 vars in 674 bytes} [Fri May 29 13:32:38 2020] GET /clientdatabases/importafile/ => generated 7705 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+['id', 'name', 'email', 'telephone', 'customer_charge_name', 'active\r']
+['1', 'NCP TRADING LTD - AKL', 'james.tang@ncpgroup.co.nz', '21582818', 'NCP Group', '1\r']
+['88', 'BABY HERO NZ LTD', 'VIVIENNE_LIKE@HOTMAIL.COM', '', 'Baby Hero ', '1\r']
+['94', 'BASICS TRADING LIMITED - AKL', 'SALES@BATL.CO.NZ', '64 03 3344 6387', 'JH Catering', '1\r']
+['98', 'BDIT LIMITED', 'BDITNZ@GMAIL.COM', '0064 9 522 5000', 'BDIT', '1\r']
+['104', 'BELOW THE LINE LTD - AKL', 'ACCOUNTS@BTL.CO.NZ', '09  5222466', 'BELOW THE LINE', '1\r']
+['110', 'BETTERPAK LTD - AKL', 'betterpaknz@gmail.com', '', 'BATTERPAK', '1\r']
+['130', 'BTI LOGISTICS LIMITED', 'DTUPOU@BTILOGISTICS.CO.NZ', '0064 9 6223989', 'BTI Logistics ', '1\r']
+['138', 'C&K FOODSERVICE TRADING LTD', 'ANNIE1229KAO@GMAIL.COM', '', 'C&K Foodservice Trading ', '1\r']
+['150', 'CARGO CARE LOGISTICS LIMITED - AKL', 'CARGOCARENZ@GMAIL.COM', '', 'JH Catering', '1\r']
+['229', 'Malcom total Logistics', 'lagona@malcolm.co.nz', '64 09 2757472', 'Malcolm ', '1\r']
+['254', 'DOMINION TRADING CO LTD - AKL', 'MEE.DOMINIONTRADING@XTRA.CO.NZ', '0064 3 343 9993', 'JH Catering', '1\r']
+['322', 'FUTURE SOFTWARE LIMITED', 'LAVENDER.LIU@FUTURESOFT.CO.NZ', '', 'JH Catering', '1\r']
+['324', 'FUTURE TECHNOLOGY LIMITED', 'NZ.FUTURE.TECHNOLOGY@GMAIL.COM', '0064 9 309 9044', 'JH Catering', '1\r']
+['325', 'FUTURE TRADING 2016 LIMITED', 'LEEJMWORKMAIL@GMAIL.COM', '', 'JH Catering', '1\r']
+['326', 'FUWA TRANSPORT & LOGISTIC LIMITED', 'FANGXUBIN@HOTMAIL.COM', '0064 9 622 1979', 'JH Catering', '1\r']
+['327', 'G&W IMPORTS LTD', 'SALES@UFOCOOKER.CO.NZ', '0064 9 4437500', 'JH Catering', '1\r']
+['335', 'GENERAL INTERNATIONAL LTD', 'GENERALRECYCLE@HOTMAIL.COM', '0064 9 269 8688', 'JH Catering', '1\r']
+['342', 'GLOBAL PLASTICS RECYCLING INDUSTRIES NZ LTD', 'RICKYTSE527@HOTMAIL.COM', '0064 9 298 3966', 'JH Catering', '1\r']
+['351', 'GOGO MUSIC CAFE', '', '', 'JH Catering', '1\r']
+['352', 'WUCHA New Zealand LIMITED (GOLDEN HARVEST)', 'Shiyueyanhuo@hotmail.com', '21521320', 'Golden Harvest', '1\r']
+['353', 'GOLDEN JADE RESTAURA', '', '', 'JH Catering', '1\r']
+['354', 'GOLDEN LOTUS TRADING', 'GOLDENLOTUSNZ@HOTMAIL.COM', '09 4449893', 'JH Catering', '1\r']
+['373', 'H&P FASHIOPN (2014) LIMITED', 'H.P.FASHIONLTD@GMAIL.COM', '64 09 09 5256923', 'JH Catering', '1\r']
+['410', 'HUAN YU LTD', 'WGV5605@GMAIL.COM', '', 'JH Catering', '1\r']
+['432', 'INK TONER NZ LIMITED', '', '', 'JH Catering', '1\r']
+['442', 'IRON RUNNER LIMITED', 'SALES@MCTYRE.CO.NZ', '0064 9 390 8878', 'JH Catering', '1\r']
+['445', 'JA BUILDING SUPPLIES LTD', 'JA.BUILDING.SUPPLIES@GMAIL.COM', '', 'JH Catering', '1\r']
+['454', 'JESSICA HOUSE RESTAURANT NZ LIMITED', 'NICOLENZ66@GMAIL.COM', '0064 9 3095198', 'JH Catering', '1\r']
+['486', 'KINDERSPIRIT LIMITED', 'VIVIANE.JOCHMANN@ME.COM', '', 'JH Catering', '1\r']
+['504', 'LANDKING LIMITED', '', '', 'JH Catering', '1\r']
+['527', 'LONG HEALTH INTERNATIONAL LIMITED - AKL', 'ELLA.DENG@LONG-HEALTH.CO.NZ', '', 'Long Health 2019', '1\r']
+['636', 'NEW ORIGIN TRADING LTD', 'NEWORIGINNZ@GMAIL.COM', '0064 09 8135413', 'JH Catering', '1\r']
+['641', 'Priority Express Limited (WDL)', 'SHERRY.S@NZWDL.COM', '', 'JH Catering', '1\r']
+['666', 'NZPL RECYCLING LTD', 'nzpl@hotmail.com', '92002988', 'JH Catering', '1\r']
+['700', 'PCB INTERNATIONAL LIMITED', '', '', 'JH Catering', '1\r']
+['779', '"SHIRLEY FACTORY CO.', ' LIMITED"', 'SHIRLEYFACTORY@WINDOWSLIVE.COM', '', 'JH Catering', '1\r']
+['785', 'SIMS RECYCLING SOLUTIONS - AKL', 'JAYPAUL.CORPUZ@SIMSMM.COM', '0064 9 275 1501', 'JH Catering', '1\r']
+['795', 'SMART POWER (NZ) LTD', 'JAMES.YAO@NCPGROUP.CO.NZ', '0064 9 5796662', 'JH Catering', '1\r']
+['804', 'ST. BRIDGE GROUP (NZ) LIMITED', 'LUCY.ST.BRIDGE@GMAIL.COM', '', 'JH Catering', '1\r']
+['814', 'SUMMER FLOWER TRADING LTD', 'XIN_HUILING@HOTMAIL.COM', '0064 9 630 8992', 'Default 2018 Auckland TR1', '1\r']
+['846', 'THE ONE LTD', 'DING282@HOTMAIL.COM', '0064 9 5233299', 'JH Catering', '1\r']
+['881', 'UPCYCLE LTD - AKL', 'UPCYCLE.SCOTT@GMAIL.COM', '0064 9 5792603', 'JH Catering', '1\r']
+['884', 'Skyview Mangement Limited - AKL', 'skyviewej@163.com', '0064 021865975', 'Agent Rates   ', '1\r']
+['928', 'WORLD PARTNERSHIP LTD - AKL', 'PAUL@WPTRADING.CO.NZ', '0064 09 2621877', 'World Partnership ', '1\r']
+['930', 'WORLDNET', '', '', 'JH Catering', '1\r']
+['947', 'YII HOME LIMITED', 'LIANYI0803@GMAIL.COM', '', 'JH Catering', '1\r']
+['968', 'DUMMY CUSTOMER', '', '', 'JH Catering', '1\r']
+['969', 'NEW TIMES FLOORING LIMITED', 'linda.lb.pei@gmail.com', '21513633', 'New times Flooring ', '1\r']
+['983', 'Angelhands Limited', 'angelhans.co.nz@gmail.co.nz', '21565562', 'By Sales Percentage ', '1\r']
+['984', 'Dean Freight International Ltd', 'shaun@deanfreight.co.nz', '78474784', 'Agent Rates   ', '1\r']
+['985', 'Purple Petrel Biotechnology NZ LIMITED', 'daniel@auslink.co.nz', '96985896', 'Default 2018 Auckland TR2', '1\r']
+['986', 'Hemo Holding LTD', 'sales@hemoholdings.co.nz', '210502525', 'Hemo Holding LTD', '1\r']
+['987', 'MEC International Limited', 'james.tang@ncpgroup.com', '09 5796662', 'NCP Group', '1\r']
+['989', 'LOWRANCE', 'Lowrancelal1981@gmail.com', '212348227', 'Lowrance Cars ', '1\r']
+['990', 'Whiskey online', 'wkliquor@hotmail.com', '21366930', 'Default 2018 Auckland TR2', '1\r']
+['991', 'Vinox Industries Limited', 'victor@vinox.co.nz', '21839088', 'Vinox- CHC- 2020', '1\r']
+['992', 'Nz Cosmetic Manufacturing Limited', 'accounts@jemarose.co.nz', '225980126', 'NZ Cosmetics ', '1\r']
+['993', 'Trisan New Zealand', 'joy.zhai@trisan.co.nz', '93666888', 'JH Catering', '1\r']
+['994', 'Mr Carbon Limited', 'mesoldavini@gmail.com', '21752617', 'MR Carbon', '1\r']
+['995', 'She ZIli', 'jianyang180@msn.com', '211717186', 'JH Catering', '1\r']
+['996', 'Toll Networks(NZ) LTD T/A Toll Global Forwarding', 'Luting.Zhang@tollgroup.com', '99289914', 'Toll Networkd ', '1\r']
+['997', 'GSF Logistics Limited', 'jonathan@gsflogistics.com', '219089656', 'Malcolm ', '1\r']
+['998', 'Forward Solar LTD', 'Chris.li@jasolarnz.com', '21390911', 'Forward Solar', '1\r']
+['999', 'Universal Pharmaceuticals Limited', 'ryan@upharma.co.nz', '92555495', 'Universal Pharmaceuticals Ltd ', '1\r']
+['1000', 'Neve Trading NZ LTD', 'maysunnz@gmail.com', '', 'Neve Trading Forklift ', '1\r']
+['1001', 'Aw tyres Ltd', 'william@awtyre.co.nz', '', 'AW Tyres', '1\r']
+['1002', 'Miniso Test', 'sales@auslink.co.nz', '99300551', 'JH Catering', '1\r']
+['1003', 'PERFECT OCEANIA (NZ) LOGISTICS LIMITED', 'accounts@ccservice.co.nz', '2102554399', 'CCS ', '1\r']
+['1004', 'DEMO- Client trail use ONLY', 'brown@auslink.co.nz', '21907879', 'JH Catering', '1\r']
+['1005', 'Magellan Logistics NZ LTD', 'amy.ye@maglog.co.nz', '9744899', 'Magelan logistics NZ LTD', '1\r']
+['1006', 'Rising Dawn LTD', 'rong851785@hotmail.com', '212314958', '2019 Tariff 1 / 7.5  ', '1\r']
+['1007', 'YOYOSO Main Store LTD', 'info@yoyoso.biz', '212980160', 'YOYOSO NZ LTD ', '1\r']
+['1009', 'FORWARDING - AUSLINK INTERNATIONAL', 'booking@auslink.co.nz', '', 'Forwarding - jessya & william', '1\r']
+['1011', 'TONY CARD GAME COMPANY', 'undeadsweetsp@gmail.com', '212966581', 'tony card game company', '1\r']
+['1012', 'CARGO CLEARANCE SERVICE (CCS)', 'INFO@CCSERVICE.CO.NZ', '-9425631', 'CCS ', '1\r']
+['1013', 'Dohs LTD', 'PAUL@WPTRADING.CO.NZ', '21703102', 'World Partnership ', '1\r']
+['1014', 'World Partnership North LTD', 'PAUL@WPTRADING.CO.NZ', '21703102', 'World Partnership ', '1\r']
+['1015', 'Quantum Logistics', 'andrew@quantum.kiwi.nz', '274765113', 'Quantum Logistics', '1\r']
+['1016', 'GW Trade NZ LTD', 'q.steven@hotmail.com', '09 2710068', 'JH Catering', '1\r']
+['1017', 'Vape Electronics', 'gonzalezjperez@gmail.com', '61432887400', 'Vape Electronics', '1\r']
+['1018', 'Golden Ocean Investment Limited', '', '', 'JH Catering', '1\r']
+['1019', 'JH catering LTD (3:30pm Limited)', 'moses1005192817@gmail.com', '', 'JH Catering', '1\r']
+['1020', 'Xin Shang Trading Ltd', 'bin@oceanstar.co.nz', '021 533 858', 'Magelan logistics NZ LTD', '1\r']
+['1022', '360 Auto Parts-AKL', 'kenzo@360autoparts.co.nz', '8003602886', '360 Auto Parts V1.0', '1\r']
+['1032', 'MAZ GROUP LIMITED', 'malq38@hotmail.com', '21778512', 'MAZ(ZOONO)', '1\r']
+['1033', 'Braid Logistics NZ LTD', 'John@braidco.co.nz', '92739713', 'Braid Logistics', '1\r']
+['1034', 'Zoono Group NZ LTD', 'lloyd.johns@zoono.com', '211212084', 'JH Catering', '1\r']
+['1035', 'Keyman trans Ltd', 'kimanpark@hotmail.com', '21411699', 'JH Catering', '1\r']
+['']
+Internal Server Error: /clientdatabases/upload/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./clientdatabases/views.py", line 52, in uploadfile
+    c_name=item[1].strip('"'),
+IndexError: list index out of range
+[pid: 6445|app: 0|req: 8/27] 192.168.1.67 () {48 vars in 896 bytes} [Fri May 29 13:32:49 2020] POST /clientdatabases/upload/ => generated 70150 bytes in 3431 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 6448|app: 0|req: 7/28] 192.168.1.67 () {42 vars in 663 bytes} [Fri May 29 13:33:05 2020] GET /setcompanystatus/ => generated 11026 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 6445|app: 0|req: 9/29] 192.168.1.67 () {42 vars in 648 bytes} [Fri May 29 13:33:26 2020] GET /warehouse/whhp/ => generated 5112 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6443|app: 0|req: 6/30] 192.168.1.67 () {42 vars in 664 bytes} [Fri May 29 13:33:31 2020] GET /warehouse/warehouseinfo/ => generated 12 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 108 bytes (1 switches on core 1)
+[pid: 6448|app: 0|req: 8/31] 192.168.1.67 () {42 vars in 672 bytes} [Fri May 29 13:33:37 2020] GET /clientdatabases/importafile/ => generated 7705 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 6443|app: 0|req: 7/32] 192.168.1.67 () {40 vars in 583 bytes} [Fri May 29 13:39:27 2020] GET /homepage/ => generated 6020 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>]>>
+[pid: 6445|app: 0|req: 10/33] 192.168.1.67 () {42 vars in 650 bytes} [Fri May 29 13:39:56 2020] GET /staff_user/worktime/ => generated 1750 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 6448|app: 0|req: 9/34] 192.168.1.67 () {42 vars in 666 bytes} [Fri May 29 13:40:02 2020] GET /clientdatabases/importafile/ => generated 7705 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6445|app: 0|req: 11/35] 192.168.1.67 () {48 vars in 926 bytes} [Fri May 29 13:40:14 2020] POST /clientdatabases/customerstockreport/ => generated 5360 bytes in 77 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Internal Server Error: /warehouse/warehouseinfo/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 96, in warehouseinfo
+    return render('warehouseinfo.html', data)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 24, in get_template
+    contents = self.get_contents(origin)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loaders/filesystem.py", line 23, in get_contents
+    with open(origin.name, encoding=self.engine.file_charset) as fp:
+OSError: [Errno 36] File name too long: '/home/brown/.local/lib/python3.6/site-packages/django/contrib/admin/templates/{\'timestamp\': datetime.date(2020, 5, 29), \'current_location_dict\': {\'Angelhands Limited\': 10, \'Aw tyres Ltd\': 39, \'BABY HERO NZ LTD\': 20, \'NCP TRADING LTD - AKL\': 2, \'Nz Cosmetic Manufacturing Limited\': 240, \'Priority Express Limited (WDL)\': 2, \'Rising Dawn LTD\': 6, \'YII HOME LIMITED\': 4, \'YOYOSO Main Store LTD\': 76}, \'charttype\': \'pieChart\', \'chartdata\': {\'x\': [\'Angelhands Limited\', \'Aw tyres Ltd\', \'BABY HERO NZ LTD\', \'NCP TRADING LTD - AKL\', \'Nz Cosmetic Manufacturing Limited\', \'Priority Express Limited (WDL)\', \'Rising Dawn LTD\', \'YII HOME LIMITED\', \'YOYOSO Main Store LTD\', \'Empty Location\'], \'y\': [10, 39, 20, 2, 240, 2, 6, 4, 76, 195]}, \'all_time_stamp\': <QuerySet [{\'id\': 1, \'l_details\': "{\'Angelhands Limited\': 10, \'Aw tyres Ltd\': 39, \'BABY HERO NZ LTD\': 20, \'NCP TRADING LTD - AKL\': 2, \'Nz Cosmetic Manufacturing Limited\': 240, \'Priority Express Limited (WDL)\': 2, \'Rising Dawn LTD\': 6, \'YII HOME LIMITED\': 4, \'YOYOSO Main Store LTD\': 76}", \'l_time\': datetime.date(2020, 5, 29)}]>, \'chartcontainer\': \'piechart_container\', \'empty_location\': 195, \'extra\': {\'x_is_date\': False, \'x_axis_format\': \'\', \'tag_script_js\': True, \'jquery_on_ready\': False}}'
+[pid: 6448|app: 0|req: 10/36] 192.168.1.67 () {42 vars in 685 bytes} [Fri May 29 13:40:18 2020] GET /warehouse/warehouseinfo/ => generated 117698 bytes in 93 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)
+[pid: 6444|app: 0|req: 9/37] 192.168.1.67 () {42 vars in 659 bytes} [Fri May 29 13:40:28 2020] GET /warehouse/whhp/ => generated 5112 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Internal Server Error: /warehouse/warehouseinfo/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 96, in warehouseinfo
+    return render('warehouseinfo.html', data)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 24, in get_template
+    contents = self.get_contents(origin)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loaders/filesystem.py", line 23, in get_contents
+    with open(origin.name, encoding=self.engine.file_charset) as fp:
+OSError: [Errno 36] File name too long: '/home/brown/.local/lib/python3.6/site-packages/django/contrib/admin/templates/{\'timestamp\': datetime.date(2020, 5, 29), \'current_location_dict\': {\'Angelhands Limited\': 10, \'Aw tyres Ltd\': 39, \'BABY HERO NZ LTD\': 20, \'NCP TRADING LTD - AKL\': 2, \'Nz Cosmetic Manufacturing Limited\': 240, \'Priority Express Limited (WDL)\': 2, \'Rising Dawn LTD\': 6, \'YII HOME LIMITED\': 4, \'YOYOSO Main Store LTD\': 76}, \'charttype\': \'pieChart\', \'chartdata\': {\'x\': [\'Angelhands Limited\', \'Aw tyres Ltd\', \'BABY HERO NZ LTD\', \'NCP TRADING LTD - AKL\', \'Nz Cosmetic Manufacturing Limited\', \'Priority Express Limited (WDL)\', \'Rising Dawn LTD\', \'YII HOME LIMITED\', \'YOYOSO Main Store LTD\', \'Empty Location\'], \'y\': [10, 39, 20, 2, 240, 2, 6, 4, 76, 195]}, \'all_time_stamp\': <QuerySet [{\'id\': 1, \'l_details\': "{\'Angelhands Limited\': 10, \'Aw tyres Ltd\': 39, \'BABY HERO NZ LTD\': 20, \'NCP TRADING LTD - AKL\': 2, \'Nz Cosmetic Manufacturing Limited\': 240, \'Priority Express Limited (WDL)\': 2, \'Rising Dawn LTD\': 6, \'YII HOME LIMITED\': 4, \'YOYOSO Main Store LTD\': 76}", \'l_time\': datetime.date(2020, 5, 29)}]>, \'chartcontainer\': \'piechart_container\', \'empty_location\': 195, \'extra\': {\'x_is_date\': False, \'x_axis_format\': \'\', \'tag_script_js\': True, \'jquery_on_ready\': False}}'
+[pid: 6444|app: 0|req: 10/38] 192.168.1.67 () {42 vars in 664 bytes} [Fri May 29 13:40:29 2020] GET /warehouse/warehouseinfo/ => generated 117677 bytes in 70 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)
+Internal Server Error: /warehouse/containerregisterpage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 47, in containerregister
+    return render(request, 'containerregister.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' container_detail_ajax' not found. ' container_detail_ajax' is not a valid view function or pattern name.
+[pid: 6445|app: 0|req: 12/39] 192.168.1.67 () {42 vars in 680 bytes} [Fri May 29 13:41:32 2020] GET /warehouse/containerregisterpage/ => generated 251168 bytes in 149 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)
+[pid: 6444|app: 0|req: 11/40] 192.168.1.67 () {42 vars in 683 bytes} [Fri May 29 13:42:04 2020] GET /warehouse/weeklychecksheet/ => generated 700 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 6448|app: 0|req: 11/41] 127.0.0.1 () {42 vars in 695 bytes} [Fri May 29 13:43:23 2020] GET /homepage/ => generated 6020 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Internal Server Error: /warehouse/containerregisterpage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 47, in containerregister
+    return render(request, 'containerregister.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' container_detail_ajax' not found. ' container_detail_ajax' is not a valid view function or pattern name.
+[pid: 6448|app: 0|req: 12/42] 127.0.0.1 () {42 vars in 741 bytes} [Fri May 29 13:43:24 2020] GET /warehouse/containerregisterpage/ => generated 251223 bytes in 152 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)
+Internal Server Error: /warehouse/warehouseinfo/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 96, in warehouseinfo
+    return render('warehouseinfo.html', data)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 24, in get_template
+    contents = self.get_contents(origin)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loaders/filesystem.py", line 23, in get_contents
+    with open(origin.name, encoding=self.engine.file_charset) as fp:
+OSError: [Errno 36] File name too long: '/home/brown/.local/lib/python3.6/site-packages/django/contrib/admin/templates/{\'timestamp\': datetime.date(2020, 5, 29), \'current_location_dict\': {\'Angelhands Limited\': 10, \'Aw tyres Ltd\': 39, \'BABY HERO NZ LTD\': 20, \'NCP TRADING LTD - AKL\': 2, \'Nz Cosmetic Manufacturing Limited\': 240, \'Priority Express Limited (WDL)\': 2, \'Rising Dawn LTD\': 6, \'YII HOME LIMITED\': 4, \'YOYOSO Main Store LTD\': 76}, \'charttype\': \'pieChart\', \'chartdata\': {\'x\': [\'Angelhands Limited\', \'Aw tyres Ltd\', \'BABY HERO NZ LTD\', \'NCP TRADING LTD - AKL\', \'Nz Cosmetic Manufacturing Limited\', \'Priority Express Limited (WDL)\', \'Rising Dawn LTD\', \'YII HOME LIMITED\', \'YOYOSO Main Store LTD\', \'Empty Location\'], \'y\': [10, 39, 20, 2, 240, 2, 6, 4, 76, 195]}, \'all_time_stamp\': <QuerySet [{\'id\': 1, \'l_details\': "{\'Angelhands Limited\': 10, \'Aw tyres Ltd\': 39, \'BABY HERO NZ LTD\': 20, \'NCP TRADING LTD - AKL\': 2, \'Nz Cosmetic Manufacturing Limited\': 240, \'Priority Express Limited (WDL)\': 2, \'Rising Dawn LTD\': 6, \'YII HOME LIMITED\': 4, \'YOYOSO Main Store LTD\': 76}", \'l_time\': datetime.date(2020, 5, 29)}]>, \'chartcontainer\': \'piechart_container\', \'empty_location\': 195, \'extra\': {\'x_is_date\': False, \'x_axis_format\': \'\', \'tag_script_js\': True, \'jquery_on_ready\': False}}'
+[pid: 6448|app: 0|req: 13/43] 127.0.0.1 () {42 vars in 725 bytes} [Fri May 29 13:43:48 2020] GET /warehouse/warehouseinfo/ => generated 117732 bytes in 70 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[pid: 6448|app: 0|req: 14/44] 127.0.0.1 () {42 vars in 707 bytes} [Fri May 29 13:44:37 2020] GET /warehouse/whhp/ => generated 5112 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Internal Server Error: /warehouse/containerregisterpage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 47, in containerregister
+    return render(request, 'containerregister.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' container_detail_ajax' not found. ' container_detail_ajax' is not a valid view function or pattern name.
+[pid: 6445|app: 0|req: 13/45] 127.0.0.1 () {42 vars in 747 bytes} [Fri May 29 13:44:38 2020] GET /warehouse/containerregisterpage/ => generated 251229 bytes in 149 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May 29 13:45:14 2020] ***
+compiled with version: 7.5.0 on 29 May 2020 01:03:58
+os: Linux-5.3.0-53-generic #47~18.04.1-Ubuntu SMP Thu May 7 13:10:50 UTC 2020
+nodename: brown-HP-Compaq-Elite-8300-SFF
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/brown/PycharmProjects/auslinkerp
+writing pidfile to uwsgi.pid
+detected binary path: /home/brown/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/brown/PycharmProjects/auslinkerp
+your processes number limit is 31154
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Python main interpreter initialized at 0x55c9f8998280
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c9f8998280 pid: 6642 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6642)
+spawned uWSGI worker 1 (pid: 6644, cores: 2)
+spawned uWSGI worker 2 (pid: 6645, cores: 2)
+spawned uWSGI worker 3 (pid: 6647, cores: 2)
+spawned uWSGI worker 4 (pid: 6649, cores: 2)
+Internal Server Error: /warehouse/containerregisterpage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 47, in containerregister
+    return render(request, 'containerregister.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' container_detail_ajax' not found. ' container_detail_ajax' is not a valid view function or pattern name.
+[pid: 6649|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 747 bytes} [Fri May 29 13:45:34 2020] GET /warehouse/containerregisterpage/ => generated 251229 bytes in 680 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[pid: 6649|app: 0|req: 2/2] 127.0.0.1 () {42 vars in 731 bytes} [Fri May 29 13:45:39 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Internal Server Error: /warehouse/containerregisterpage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 47, in containerregister
+    return render(request, 'containerregister.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' container_detail_ajax' not found. ' container_detail_ajax' is not a valid view function or pattern name.
+[pid: 6644|app: 0|req: 1/3] 127.0.0.1 () {42 vars in 747 bytes} [Fri May 29 13:45:50 2020] GET /warehouse/containerregisterpage/ => generated 251229 bytes in 683 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[pid: 6649|app: 0|req: 3/4] 127.0.0.1 () {42 vars in 731 bytes} [Fri May 29 13:59:33 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+2020-05-25
+[pid: 6649|app: 0|req: 4/5] 127.0.0.1 () {46 vars in 784 bytes} [Fri May 29 13:59:40 2020] POST /warehouse/updatetimestamp/ => generated 2 bytes in 89 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 1)
+[pid: 6649|app: 0|req: 5/6] 127.0.0.1 () {40 vars in 681 bytes} [Fri May 29 13:59:49 2020] GET /warehouse/warehouseinfo => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 130 bytes (1 switches on core 0)
+[pid: 6649|app: 0|req: 6/7] 127.0.0.1 () {40 vars in 683 bytes} [Fri May 29 13:59:49 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6649|app: 0|req: 7/8] 127.0.0.1 () {42 vars in 710 bytes} [Fri May 29 14:00:01 2020] GET /homepage/ => generated 6020 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Internal Server Error: /warehouse/containerregisterpage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 47, in containerregister
+    return render(request, 'containerregister.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' container_detail_ajax' not found. ' container_detail_ajax' is not a valid view function or pattern name.
+[pid: 6647|app: 0|req: 1/9] 127.0.0.1 () {42 vars in 741 bytes} [Fri May 29 14:00:04 2020] GET /warehouse/containerregisterpage/ => generated 251223 bytes in 688 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[pid: 6644|app: 0|req: 2/10] 127.0.0.1 () {46 vars in 749 bytes} [Fri May 29 14:00:18 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 36 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 6649|app: 0|req: 8/11] 127.0.0.1 () {44 vars in 628 bytes} [Fri May 29 14:00:19 2020] GET /favicon.ico => generated 3304 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /warehouse/containerregisterpage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 47, in containerregister
+    return render(request, 'containerregister.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' container_detail_ajax' not found. ' container_detail_ajax' is not a valid view function or pattern name.
+[pid: 6647|app: 0|req: 2/12] 127.0.0.1 () {42 vars in 741 bytes} [Fri May 29 14:05:26 2020] GET /warehouse/containerregisterpage/ => generated 251223 bytes in 147 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May 29 14:28:46 2020] ***
+compiled with version: 7.5.0 on 29 May 2020 01:03:58
+os: Linux-5.3.0-53-generic #47~18.04.1-Ubuntu SMP Thu May 7 13:10:50 UTC 2020
+nodename: brown-HP-Compaq-Elite-8300-SFF
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/brown/PycharmProjects/auslinkerp
+writing pidfile to uwsgi.pid
+detected binary path: /home/brown/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/brown/PycharmProjects/auslinkerp
+your processes number limit is 31154
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Python main interpreter initialized at 0x55b020a38280
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55b020a38280 pid: 7251 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7251)
+spawned uWSGI worker 1 (pid: 7253, cores: 2)
+spawned uWSGI worker 2 (pid: 7254, cores: 2)
+spawned uWSGI worker 3 (pid: 7256, cores: 2)
+spawned uWSGI worker 4 (pid: 7258, cores: 2)
+[pid: 7253|app: 0|req: 1/1] 192.168.1.69 () {40 vars in 734 bytes} [Fri May 29 14:29:38 2020] GET /homepage => generated 0 bytes in 278 msecs (HTTP/1.1 301) 3 headers in 115 bytes (1 switches on core 0)
+[pid: 7254|app: 0|req: 1/2] 192.168.1.69 () {40 vars in 736 bytes} [Fri May 29 14:29:39 2020] GET /homepage/ => generated 6019 bytes in 508 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 7258|app: 0|req: 1/3] 192.168.1.69 () {40 vars in 665 bytes} [Fri May 29 14:29:40 2020] GET /favicon.ico => generated 3307 bytes in 282 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7254|app: 0|req: 2/4] 192.168.1.69 () {38 vars in 609 bytes} [Fri May 29 14:30:26 2020] GET /warehouse/containerregisterpage/ => generated 21875 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 7254|app: 0|req: 3/5] 192.168.1.69 () {36 vars in 504 bytes} [Fri May 29 14:30:31 2020] GET /favicon.ico => generated 3307 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 1/6] 192.168.1.69 () {40 vars in 661 bytes} [Fri May 29 14:30:40 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 533 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 7258|app: 0|req: 2/7] 192.168.1.69 () {36 vars in 504 bytes} [Fri May 29 14:30:42 2020] GET /favicon.ico => generated 3307 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 2/8] 192.168.1.69 () {40 vars in 736 bytes} [Fri May 29 14:32:42 2020] GET /homepage/ => generated 6019 bytes in 238 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7256|app: 0|req: 2/9] 192.168.1.69 () {42 vars in 827 bytes} [Fri May 29 14:32:47 2020] GET /warehouse/containerregisterpage/ => generated 21875 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7254|app: 0|req: 4/10] 192.168.1.69 () {42 vars in 840 bytes} [Fri May 29 14:32:51 2020] GET /warehouse/weeklychecksheet/ => generated 700 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+[pid: 7254|app: 0|req: 5/11] 192.168.1.69 () {42 vars in 834 bytes} [Fri May 29 14:32:59 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 40 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 3/12] 192.168.1.69 () {42 vars in 796 bytes} [Fri May 29 14:33:08 2020] GET /homepage/ => generated 6019 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>]>>
+[pid: 7258|app: 0|req: 3/13] 192.168.1.69 () {42 vars in 803 bytes} [Fri May 29 14:33:18 2020] GET /staff_user/worktime/ => generated 1750 bytes in 234 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 7258|app: 0|req: 4/14] 127.0.0.1 () {40 vars in 669 bytes} [Fri May 29 14:36:57 2020] GET /setcompanystatus/ => generated 11025 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 4/15] 127.0.0.1 () {42 vars in 703 bytes} [Fri May 29 14:37:23 2020] GET /homepage/ => generated 6019 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 3/16] 127.0.0.1 () {42 vars in 711 bytes} [Fri May 29 14:37:28 2020] GET /setcompanystatus/ => generated 11025 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 5/17] 192.168.1.69 () {42 vars in 827 bytes} [Fri May 29 14:46:01 2020] GET /warehouse/containerregisterpage/ => generated 21875 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+<QueryDict: {'csrfmiddlewaretoken': ['uqo72Wd9YMLPS0WNoVAVsQvrAGQBZDsXkiuEtBQzD6CDv2CXGOhtJjKgbvo5vmjr'], 'ctnr_number': ['OOLU8924991'], 'ctnr_owner': ['FORWARDING - AUSLINK INTERNATIONAL'], 'ctnr_type': ['40FT'], 'ctnr_job': ['Devan and Storage\r\n            '], 'ctnr_eta': ['2020-06-02']}>
+[pid: 7253|app: 0|req: 4/18] 192.168.1.69 () {50 vars in 1032 bytes} [Fri May 29 14:47:00 2020] POST /warehouse/container_upload_info/ => generated 5111 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 5/19] 192.168.1.69 () {42 vars in 804 bytes} [Fri May 29 14:47:04 2020] GET /homepage/ => generated 6404 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 6/20] 192.168.1.69 () {42 vars in 827 bytes} [Fri May 29 14:47:09 2020] GET /warehouse/containerregisterpage/ => generated 21930 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+<QueryDict: {'csrfmiddlewaretoken': ['tQeHsZ4niucldYP5LYAtk10hgWd2EqbBCxsQdQc7173hISLSCwa6zCXJX0wSmUHx'], 'ctnr_number': ['OOLU8628053'], 'ctnr_owner': ['FORWARDING - AUSLINK INTERNATIONAL'], 'ctnr_type': ['40FT'], 'ctnr_job': ['Devan and Storage\r\n            '], 'ctnr_eta': ['2020-07-02']}>
+[pid: 7253|app: 0|req: 6/21] 192.168.1.69 () {50 vars in 1032 bytes} [Fri May 29 14:47:44 2020] POST /warehouse/container_upload_info/ => generated 5111 bytes in 75 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7254|app: 0|req: 6/22] 192.168.1.69 () {42 vars in 804 bytes} [Fri May 29 14:47:46 2020] GET /homepage/ => generated 6789 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 5/23] 192.168.1.69 () {42 vars in 827 bytes} [Fri May 29 14:48:19 2020] GET /warehouse/containerregisterpage/ => generated 21985 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 7/24] 192.168.1.69 () {48 vars in 912 bytes} [Fri May 29 14:48:25 2020] POST /warehouse/container_detail_ajax/ => generated 127 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+OOLU8628053
+[pid: 7253|app: 0|req: 8/25] 192.168.1.69 () {48 vars in 892 bytes} [Fri May 29 14:48:29 2020] POST /warehouse/markjobdone/ => generated 4 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 6/26] 192.168.1.69 () {42 vars in 804 bytes} [Fri May 29 14:48:32 2020] GET /homepage/ => generated 6404 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 9/27] 192.168.1.69 () {42 vars in 827 bytes} [Fri May 29 14:48:36 2020] GET /warehouse/containerregisterpage/ => generated 21985 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 10/28] 192.168.1.69 () {42 vars in 850 bytes} [Fri May 29 14:48:39 2020] GET /warehouse/containerregisterpage/ => generated 21985 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 11/29] 192.168.1.69 () {42 vars in 816 bytes} [Fri May 29 14:48:40 2020] GET /warehouse/whhp/ => generated 5695 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 12/30] 192.168.1.69 () {42 vars in 833 bytes} [Fri May 29 14:48:57 2020] GET /warehouse/containerregisterpage/ => generated 21985 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7258|app: 0|req: 7/31] 127.0.0.1 () {42 vars in 703 bytes} [Fri May 29 14:49:21 2020] GET /homepage/ => generated 6404 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+<QueryDict: {'csrfmiddlewaretoken': ['NG7I7qhkxFykhKL4NZaQH1ofa8J34HJFJPRrwek9lIhk6dBhms8PaJzWQVgZH1lm'], 'ctnr_number': ['MRKU9226498'], 'ctnr_owner': ['FORWARDING - AUSLINK INTERNATIONAL'], 'ctnr_type': ['20FT'], 'ctnr_job': ['ATF\r\n            '], 'ctnr_eta': ['2020-06-03']}>
+[pid: 7254|app: 0|req: 7/32] 192.168.1.69 () {50 vars in 1032 bytes} [Fri May 29 14:49:44 2020] POST /warehouse/container_upload_info/ => generated 5111 bytes in 51 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 8/33] 192.168.1.69 () {42 vars in 804 bytes} [Fri May 29 14:49:48 2020] GET /homepage/ => generated 6775 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 13/34] 192.168.1.77 () {40 vars in 744 bytes} [Fri May 29 14:50:22 2020] GET /homepage => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 115 bytes (1 switches on core 1)
+[pid: 7254|app: 0|req: 8/35] 192.168.1.77 () {40 vars in 746 bytes} [Fri May 29 14:50:22 2020] GET /homepage/ => generated 6775 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 7253|app: 0|req: 14/36] 192.168.1.77 () {40 vars in 675 bytes} [Fri May 29 14:50:23 2020] GET /favicon.ico => generated 3307 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7258|app: 0|req: 9/37] 192.168.1.77 () {42 vars in 807 bytes} [Fri May 29 14:50:26 2020] GET /setcompanystatus/ => generated 11025 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 15/38] 192.168.1.77 () {42 vars in 858 bytes} [Fri May 29 14:50:30 2020] GET /search-post?ClientSelected=BDIT+LIMITED => generated 11549 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>]>>
+[pid: 7253|app: 0|req: 16/39] 192.168.1.69 () {42 vars in 803 bytes} [Fri May 29 14:50:31 2020] GET /staff_user/worktime/ => generated 2506 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 7/40] 192.168.1.77 () {50 vars in 1021 bytes} [Fri May 29 14:50:32 2020] POST /app/change_onhold/ => generated 5976 bytes in 54 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7254|app: 0|req: 9/41] 192.168.1.77 () {42 vars in 800 bytes} [Fri May 29 14:50:39 2020] GET /homepage/ => generated 6775 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 17/42] 192.168.1.77 () {42 vars in 791 bytes} [Fri May 29 14:50:40 2020] GET /homepage/ => generated 6775 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 10/43] 192.168.1.77 () {42 vars in 807 bytes} [Fri May 29 14:50:45 2020] GET /setcompanystatus/ => generated 11025 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 18/44] 192.168.1.77 () {42 vars in 858 bytes} [Fri May 29 14:50:54 2020] GET /search-post?ClientSelected=BDIT+LIMITED => generated 11548 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+AA
+[pid: 7254|app: 0|req: 10/45] 192.168.1.77 () {50 vars in 1021 bytes} [Fri May 29 14:50:58 2020] POST /app/change_onhold/ => generated 5970 bytes in 76 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7254|app: 0|req: 11/46] 192.168.1.77 () {42 vars in 800 bytes} [Fri May 29 14:51:00 2020] GET /homepage/ => generated 6867 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 19/47] 192.168.1.77 () {42 vars in 807 bytes} [Fri May 29 14:51:06 2020] GET /setcompanystatus/ => generated 11093 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 20/48] 192.168.1.77 () {42 vars in 868 bytes} [Fri May 29 14:51:29 2020] GET /search-post?ClientSelected=Mr+Carbon+Limited => generated 11563 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 21/49] 192.168.1.77 () {50 vars in 1026 bytes} [Fri May 29 14:51:31 2020] POST /app/change_onhold/ => generated 5981 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 22/50] 192.168.1.77 () {42 vars in 800 bytes} [Fri May 29 14:51:35 2020] GET /homepage/ => generated 6867 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 8/51] 192.168.1.69 () {42 vars in 817 bytes} [Fri May 29 14:52:18 2020] GET /warehouse/weeklychecksheet/ => generated 700 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 11/52] 192.168.1.69 () {42 vars in 811 bytes} [Fri May 29 14:52:24 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 23/53] 192.168.1.77 () {42 vars in 791 bytes} [Fri May 29 14:52:45 2020] GET /homepage/ => generated 6867 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 12/54] 127.0.0.1 () {42 vars in 695 bytes} [Fri May 29 14:54:14 2020] GET /homepage/ => generated 6867 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 13/55] 127.0.0.1 () {42 vars in 731 bytes} [Fri May 29 14:54:36 2020] GET /staff_user/staffinformation => generated 5521 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 9/56] 192.168.1.69 () {42 vars in 796 bytes} [Fri May 29 14:54:43 2020] GET /homepage/ => generated 6867 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 10/57] 192.168.1.69 () {42 vars in 817 bytes} [Fri May 29 14:54:52 2020] GET /staff_user/staffinformation => generated 5521 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>]>>
+[pid: 7256|app: 0|req: 11/58] 192.168.1.69 () {42 vars in 821 bytes} [Fri May 29 14:55:06 2020] GET /staff_user/worktime/ => generated 2598 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 24/59] 192.168.1.69 () {50 vars in 986 bytes} [Fri May 29 14:55:15 2020] POST /staff_user/work/ => generated 364 bytes in 148 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7253|app: 0|req: 25/60] 192.168.1.69 () {42 vars in 811 bytes} [Fri May 29 14:55:18 2020] GET /staff_user/worktime/? => generated 2683 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7256|app: 0|req: 12/61] 192.168.1.69 () {50 vars in 987 bytes} [Fri May 29 14:55:26 2020] POST /staff_user/work/ => generated 317 bytes in 133 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>]>>
+[pid: 7258|app: 0|req: 14/62] 192.168.1.69 () {42 vars in 811 bytes} [Fri May 29 14:55:27 2020] GET /staff_user/worktime/? => generated 2598 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 15/63] 192.168.1.69 () {50 vars in 987 bytes} [Fri May 29 14:55:38 2020] POST /staff_user/work/ => generated 364 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7254|app: 0|req: 12/64] 192.168.1.69 () {42 vars in 811 bytes} [Fri May 29 14:55:39 2020] GET /staff_user/worktime/? => generated 2683 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 16/65] 192.168.1.69 () {42 vars in 835 bytes} [Fri May 29 14:55:45 2020] GET /staff_user/staffinformation => generated 5726 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 17/66] 127.0.0.1 () {42 vars in 713 bytes} [Fri May 29 14:56:10 2020] GET /homepage/ => generated 6952 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7258|app: 0|req: 18/67] 192.168.1.69 () {42 vars in 815 bytes} [Fri May 29 14:59:17 2020] GET /setcompanystatus/ => generated 11093 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 19/68] 192.168.1.69 () {42 vars in 825 bytes} [Fri May 29 14:59:18 2020] GET /clientdatabases/clientdbhp/ => generated 4931 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7253|app: 0|req: 26/69] 192.168.1.69 () {42 vars in 835 bytes} [Fri May 29 14:59:19 2020] GET /clientdatabases/clientdbhp/ => generated 4931 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 13/70] 192.168.1.69 () {42 vars in 835 bytes} [Fri May 29 14:59:20 2020] GET /clientdatabases/clientdbhp/ => generated 4931 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7253|app: 0|req: 27/71] 192.168.1.69 () {42 vars in 821 bytes} [Fri May 29 14:59:21 2020] GET /staff_user/worktime/ => generated 2683 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7254|app: 0|req: 13/72] 127.0.0.1 () {42 vars in 711 bytes} [Fri May 29 15:08:47 2020] GET /setcompanystatus/ => generated 11093 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7254|app: 0|req: 14/73] 127.0.0.1 () {42 vars in 772 bytes} [Fri May 29 15:09:16 2020] GET /search-post?ClientSelected=Mr+Carbon+Limited => generated 11562 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+AA
+[pid: 7254|app: 0|req: 15/74] 127.0.0.1 () {48 vars in 896 bytes} [Fri May 29 15:09:19 2020] POST /app/change_onhold/ => generated 5975 bytes in 106 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7256|app: 0|req: 14/75] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:09:25 2020] GET /setcompanystatus/ => generated 11171 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7256|app: 0|req: 15/76] 127.0.0.1 () {42 vars in 754 bytes} [Fri May 29 15:09:34 2020] GET /search-post?ClientSelected=LOWRANCE => generated 11541 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7258|app: 0|req: 20/77] 127.0.0.1 () {48 vars in 887 bytes} [Fri May 29 15:09:36 2020] POST /app/change_onhold/ => generated 5972 bytes in 153 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7258|app: 0|req: 21/78] 127.0.0.1 () {42 vars in 750 bytes} [Fri May 29 15:09:51 2020] GET /warehouse/containerregisterpage/ => generated 22040 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7258|app: 0|req: 22/79] 127.0.0.1 () {48 vars in 873 bytes} [Fri May 29 15:09:54 2020] POST /warehouse/container_detail_ajax/ => generated 127 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 7254|app: 0|req: 16/80] 127.0.0.1 () {48 vars in 873 bytes} [Fri May 29 15:09:56 2020] POST /warehouse/container_detail_ajax/ => generated 113 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 7256|app: 0|req: 16/81] 127.0.0.1 () {42 vars in 734 bytes} [Fri May 29 15:10:01 2020] GET /setcompanystatus/ => generated 11171 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7253|app: 0|req: 28/82] 127.0.0.1 () {42 vars in 754 bytes} [Fri May 29 15:10:31 2020] GET /search-post?ClientSelected=LOWRANCE => generated 11540 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+AA
+[pid: 7256|app: 0|req: 17/83] 127.0.0.1 () {48 vars in 887 bytes} [Fri May 29 15:10:34 2020] POST /app/change_onhold/ => generated 5966 bytes in 227 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7254|app: 0|req: 17/84] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:10:37 2020] GET /setcompanystatus/ => generated 11231 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7258|app: 0|req: 23/85] 127.0.0.1 () {42 vars in 770 bytes} [Fri May 29 15:10:45 2020] GET /search-post?ClientSelected=Hemo+Holding+LTD => generated 11564 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7256|app: 0|req: 18/86] 127.0.0.1 () {48 vars in 895 bytes} [Fri May 29 15:10:47 2020] POST /app/change_onhold/ => generated 5980 bytes in 131 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7254|app: 0|req: 18/87] 192.168.1.69 () {42 vars in 799 bytes} [Fri May 29 15:12:46 2020] GET /homepage/ => generated 7137 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May 29 15:13:40 2020] ***
+compiled with version: 7.5.0 on 29 May 2020 01:03:58
+os: Linux-5.3.0-53-generic #47~18.04.1-Ubuntu SMP Thu May 7 13:10:50 UTC 2020
+nodename: brown-HP-Compaq-Elite-8300-SFF
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/brown/PycharmProjects/auslinkerp
+writing pidfile to uwsgi.pid
+detected binary path: /home/brown/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/brown/PycharmProjects/auslinkerp
+your processes number limit is 31154
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Python main interpreter initialized at 0x55f2694cb280
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f2694cb280 pid: 7511 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7511)
+spawned uWSGI worker 1 (pid: 7513, cores: 2)
+spawned uWSGI worker 2 (pid: 7514, cores: 2)
+spawned uWSGI worker 3 (pid: 7516, cores: 2)
+spawned uWSGI worker 4 (pid: 7518, cores: 2)
+[pid: 7518|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:14:24 2020] GET /setcompanystatus/ => generated 11231 bytes in 534 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7514|app: 0|req: 1/2] 192.168.1.69 () {40 vars in 736 bytes} [Fri May 29 15:14:31 2020] GET /homepage/ => generated 7137 bytes in 508 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7514|app: 0|req: 2/3] 127.0.0.1 () {42 vars in 770 bytes} [Fri May 29 15:14:52 2020] GET /search-post?ClientSelected=Hemo+Holding+LTD => generated 11563 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+AA
+Internal Server Error: /app/change_onhold/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 93, in change_onhold_status
+    return render(request, 'homepage.html', context=context)
+UnboundLocalError: local variable 'context' referenced before assignment
+[pid: 7513|app: 0|req: 1/4] 127.0.0.1 () {48 vars in 895 bytes} [Fri May 29 15:14:53 2020] POST /app/change_onhold/ => generated 59488 bytes in 397 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 7518|app: 0|req: 2/5] 127.0.0.1 () {42 vars in 820 bytes} [Fri May 29 15:15:34 2020] GET /search-post?ClientSelected=BASICS+TRADING+LIMITED+-+AKL => generated 11597 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7516|app: 0|req: 1/6] 127.0.0.1 () {42 vars in 808 bytes} [Fri May 29 15:15:44 2020] GET /search-post?ClientSelected=Hemo+Holding+LTD => generated 11563 bytes in 524 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7518|app: 0|req: 3/7] 127.0.0.1 () {48 vars in 895 bytes} [Fri May 29 15:15:50 2020] POST /app/change_onhold/ => generated 5980 bytes in 96 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7518|app: 0|req: 4/8] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:16:05 2020] GET /setcompanystatus/ => generated 11231 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7513|app: 0|req: 2/9] 127.0.0.1 () {42 vars in 770 bytes} [Fri May 29 15:16:11 2020] GET /search-post?ClientSelected=Hemo+Holding+LTD => generated 11563 bytes in 252 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+AA
+Internal Server Error: /app/change_onhold/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 93, in change_onhold_status
+UnboundLocalError: local variable 'context' referenced before assignment
+[pid: 7518|app: 0|req: 5/10] 127.0.0.1 () {48 vars in 895 bytes} [Fri May 29 15:16:12 2020] POST /app/change_onhold/ => generated 57193 bytes in 194 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May 29 15:16:52 2020] ***
+compiled with version: 7.5.0 on 29 May 2020 01:03:58
+os: Linux-5.3.0-53-generic #47~18.04.1-Ubuntu SMP Thu May 7 13:10:50 UTC 2020
+nodename: brown-HP-Compaq-Elite-8300-SFF
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/brown/PycharmProjects/auslinkerp
+writing pidfile to uwsgi.pid
+detected binary path: /home/brown/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/brown/PycharmProjects/auslinkerp
+your processes number limit is 31154
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Python main interpreter initialized at 0x560e8c9b7280
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x560e8c9b7280 pid: 7570 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7570)
+spawned uWSGI worker 1 (pid: 7572, cores: 2)
+spawned uWSGI worker 2 (pid: 7573, cores: 2)
+spawned uWSGI worker 3 (pid: 7575, cores: 2)
+spawned uWSGI worker 4 (pid: 7577, cores: 2)
+[pid: 7575|app: 0|req: 1/1] 127.0.0.1 () {50 vars in 926 bytes} [Fri May 29 15:17:07 2020] POST /app/change_onhold/ => generated 5980 bytes in 593 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7575|app: 0|req: 2/2] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:17:11 2020] GET /setcompanystatus/ => generated 11231 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7573|app: 0|req: 1/3] 127.0.0.1 () {42 vars in 770 bytes} [Fri May 29 15:17:19 2020] GET /search-post?ClientSelected=Hemo+Holding+LTD => generated 11563 bytes in 535 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+AA
+[pid: 7577|app: 0|req: 1/4] 127.0.0.1 () {48 vars in 895 bytes} [Fri May 29 15:17:22 2020] POST /app/change_onhold/ => generated 5974 bytes in 569 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7573|app: 0|req: 2/5] 127.0.0.1 () {42 vars in 704 bytes} [Fri May 29 15:17:26 2020] GET /homepage/ => generated 7233 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7577|app: 0|req: 2/6] 127.0.0.1 () {42 vars in 711 bytes} [Fri May 29 15:17:34 2020] GET /setcompanystatus/ => generated 11307 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7577|app: 0|req: 3/7] 127.0.0.1 () {42 vars in 717 bytes} [Fri May 29 15:17:58 2020] GET /clientdataentry/ => generated 6148 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7575|app: 0|req: 3/8] 127.0.0.1 () {42 vars in 718 bytes} [Fri May 29 15:18:09 2020] GET /setcompanystatus/ => generated 11307 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7575|app: 0|req: 4/9] 127.0.0.1 () {42 vars in 806 bytes} [Fri May 29 15:18:19 2020] GET /search-post?ClientSelected=Priority+Express+Limited+%28WDL%29 => generated 11591 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7575|app: 0|req: 5/10] 127.0.0.1 () {48 vars in 913 bytes} [Fri May 29 15:18:23 2020] POST /app/change_onhold/ => generated 5994 bytes in 85 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7573|app: 0|req: 3/11] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:18:28 2020] GET /setcompanystatus/ => generated 11307 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7575|app: 0|req: 6/12] 127.0.0.1 () {42 vars in 806 bytes} [Fri May 29 15:18:42 2020] GET /search-post?ClientSelected=Priority+Express+Limited+%28WDL%29 => generated 11590 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+AA
+[pid: 7573|app: 0|req: 4/13] 127.0.0.1 () {48 vars in 913 bytes} [Fri May 29 15:18:44 2020] POST /app/change_onhold/ => generated 5988 bytes in 92 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7577|app: 0|req: 4/14] 127.0.0.1 () {42 vars in 716 bytes} [Fri May 29 15:18:53 2020] GET /warehouse/whhp/ => generated 5973 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7577|app: 0|req: 5/15] 127.0.0.1 () {42 vars in 701 bytes} [Fri May 29 15:18:55 2020] GET /homepage/ => generated 7343 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7577|app: 0|req: 6/16] 127.0.0.1 () {42 vars in 711 bytes} [Fri May 29 15:19:02 2020] GET /setcompanystatus/ => generated 11411 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7577|app: 0|req: 7/17] 127.0.0.1 () {42 vars in 770 bytes} [Fri May 29 15:19:06 2020] GET /search-post?ClientSelected=YII+HOME+LIMITED => generated 11551 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7577|app: 0|req: 8/18] 127.0.0.1 () {48 vars in 895 bytes} [Fri May 29 15:19:09 2020] POST /app/change_onhold/ => generated 5980 bytes in 96 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May 29 15:25:14 2020] ***
+compiled with version: 7.5.0 on 29 May 2020 01:03:58
+os: Linux-5.3.0-53-generic #47~18.04.1-Ubuntu SMP Thu May 7 13:10:50 UTC 2020
+nodename: brown-HP-Compaq-Elite-8300-SFF
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/brown/PycharmProjects/auslinkerp
+writing pidfile to uwsgi.pid
+detected binary path: /home/brown/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/brown/PycharmProjects/auslinkerp
+your processes number limit is 31154
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Python main interpreter initialized at 0x55f2bf248280
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f2bf248280 pid: 7674 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7674)
+spawned uWSGI worker 1 (pid: 7676, cores: 2)
+spawned uWSGI worker 2 (pid: 7677, cores: 2)
+spawned uWSGI worker 3 (pid: 7679, cores: 2)
+spawned uWSGI worker 4 (pid: 7681, cores: 2)
+[pid: 7677|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:25:30 2020] GET /setcompanystatus/ => generated 11411 bytes in 530 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 1/2] 127.0.0.1 () {42 vars in 770 bytes} [Fri May 29 15:26:33 2020] GET /search-post?ClientSelected=YII+HOME+LIMITED => generated 11550 bytes in 527 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+AA
+[pid: 7681|app: 0|req: 2/3] 127.0.0.1 () {48 vars in 895 bytes} [Fri May 29 15:26:36 2020] POST /app/change_onhold/ => generated 5974 bytes in 111 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 2/4] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:26:40 2020] GET /setcompanystatus/ => generated 11487 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 1/5] 127.0.0.1 () {42 vars in 774 bytes} [Fri May 29 15:27:13 2020] GET /search-post?ClientSelected=Angelhands+Limited => generated 11572 bytes in 532 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 3/6] 127.0.0.1 () {48 vars in 897 bytes} [Fri May 29 15:27:15 2020] POST /app/change_onhold/ => generated 5982 bytes in 114 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 4/7] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:27:24 2020] GET /setcompanystatus/ => generated 11487 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 3/8] 127.0.0.1 () {42 vars in 774 bytes} [Fri May 29 15:27:28 2020] GET /search-post?ClientSelected=Angelhands+Limited => generated 11571 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+AA
+[pid: 7676|app: 0|req: 1/9] 127.0.0.1 () {48 vars in 897 bytes} [Fri May 29 15:27:29 2020] POST /app/change_onhold/ => generated 5976 bytes in 577 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 5/10] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:27:34 2020] GET /setcompanystatus/ => generated 11567 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 2/11] 127.0.0.1 () {42 vars in 780 bytes} [Fri May 29 15:27:38 2020] GET /search-post?ClientSelected=YOYOSO+Main+Store+LTD => generated 11571 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 6/12] 127.0.0.1 () {48 vars in 900 bytes} [Fri May 29 15:27:39 2020] POST /app/change_onhold/ => generated 5985 bytes in 121 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 3/13] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:27:46 2020] GET /setcompanystatus/ => generated 11567 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 7/14] 127.0.0.1 () {42 vars in 780 bytes} [Fri May 29 15:27:51 2020] GET /search-post?ClientSelected=YOYOSO+Main+Store+LTD => generated 11570 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+AA
+[pid: 7681|app: 0|req: 8/15] 127.0.0.1 () {48 vars in 900 bytes} [Fri May 29 15:27:52 2020] POST /app/change_onhold/ => generated 5979 bytes in 119 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 2/16] 127.0.0.1 () {42 vars in 720 bytes} [Fri May 29 15:27:58 2020] GET /setcompanystatus/ => generated 11653 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 4/17] 127.0.0.1 () {42 vars in 703 bytes} [Fri May 29 15:28:14 2020] GET /homepage/ => generated 7638 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 9/18] 127.0.0.1 () {42 vars in 709 bytes} [Fri May 29 15:28:27 2020] GET /clientdataentry/ => generated 6148 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7679|app: 0|req: 3/19] 127.0.0.1 () {40 vars in 675 bytes} [Fri May 29 15:29:44 2020] GET /staff_user/worktime/ => generated 3369 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)

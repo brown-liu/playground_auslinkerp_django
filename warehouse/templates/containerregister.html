@@ -9,7 +9,7 @@
         var result = obj.value;
 
         $.ajax({
-            url: '{% url 'warehouse: container_detail_ajax' %}',
+            url: '{% url "warehouse:container_detail_ajax" %}',
             type: "POST",
             data: {'key': result},
             success: function (data) {

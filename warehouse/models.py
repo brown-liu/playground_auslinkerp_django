@@ -23,7 +23,7 @@ class containers(models.Model):
     ctnr_eta = models.DateField()
     ctnr_owner = models.CharField(max_length=128)
     ctnr_job = models.CharField(max_length=256)
-    ctnr_active = models.CharField(max_length=8, default=1)
+    ctnr_active = models.CharField(max_length=8, default="1")
 
     @classmethod
     def createContiainers(cls, ctnr_number, ctnr_type, ctnr_eta, ctnr_owner, ctnr_job, ctnr_special):

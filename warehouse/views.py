@@ -1,7 +1,7 @@
 from datetime import datetime
 import json
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 from warehouse.models import containers, carton_cloud_client, location_used
 import ast
 
@@ -33,18 +33,22 @@ def container_upload_info(request):
 
 
 def containerregister(request):
-    container_owner = carton_cloud_client.objects.all().order_by('c_name')
-    names = container_owner.values()
+    if carton_cloud_client.objects.all().exists():
+        container_owner = carton_cloud_client.objects.all().order_by('c_name')
+        names = container_owner.values()
 
-    container = containers.objects.all()
-    detail = container.values()
+        container = containers.objects.all()
+        detail = container.values()
 
-    context = {
-        "container": detail,
-        'container_client': names
-    }
+        context = {
+            "container": detail,
+            'container_client': names
+        }
 
-    return render(request, 'containerregister.html', context=context)
+
+        return render(request, 'containerregister.html', context=context)
+    else:
+        return render(request, 'containerregister.html')
 
 
 def warehouseinfo(request):
@@ -93,7 +97,7 @@ def warehouseinfo(request):
                     'jquery_on_ready': False,
                 }
             }
-            return render_to_response('warehouseinfo.html', data)
+            return render(request,'warehouseinfo.html', data)
         else:
             return HttpResponse('No infor yet')
     elif request.method == "POST":
@@ -212,7 +216,8 @@ def container_detail_ajax(request):
         'e': container.ctnr_active
 
     }
-    return JsonResponse(data)
+
+    return JsonResponse(data, safe=False)
 
 
 def mark_job_done(request):
