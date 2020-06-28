@@ -35,5 +35,6 @@ urlpatterns = [
     url(r'^adminandaccount/', include('adminandaccount.urls')),
     url(r'^Daily_KPI/', include('Daily_KPI.urls')),
     url(r'^clientdatabases/', include('clientdatabases.urls')),
+    url(r'^information/',include(('information.urls','information'),namespace='information')),
 
 ]

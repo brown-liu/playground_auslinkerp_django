@@ -35,6 +35,18 @@
         })
 
     }
+    delete_container=()=>{
+        var container = document.getElementById('container');
+        var ctnr_number = container.value;
+        $.ajax({
+            url: '{% url "warehouse:delete_container" %}',
+            type: "POST",
+            data: {"container_number": ctnr_number},
+            success: function () {
+                alert('Container Removed from Database');
+            }
+        })
+    }
 
 </script>
 <div style="width: 45%;float: left;border: 1px; padding: 30px 30px;">
@@ -112,6 +124,7 @@
         </select>
         <!------------------------------------Mark job DoneMark job DoneMark job Done-BUTTON is here-------------------->
         <button class="ui primary button" onclick="update_container()">Mark job Done</button>
+        <button class="ui negative basic button" onclick="delete_container()">Remove this Container</button>
     </div>
     <style>
         table, th, td {

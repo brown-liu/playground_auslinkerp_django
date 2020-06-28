@@ -15,5 +15,6 @@ urlpatterns = [
     url(r'^update_chart/', views.update_chart, name='update_chart'),
     url(r"^change_container_status/", views.change_container_status, name='change_container_status'),
     url(r'^container_detail_ajax/', views.container_detail_ajax, name="container_detail_ajax"),
-    url(r'^markjobdone/', views.mark_job_done, name="mark_job_done")
+    url(r'^markjobdone/', views.mark_job_done, name="mark_job_done"),
+    url(r'^delete_container/',views.delete_container,name='delete_container')
 ]

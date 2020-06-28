@@ -223,8 +223,15 @@ def container_detail_ajax(request):
 def mark_job_done(request):
     container_number = request.POST.get("container_number")
     container = containers.objects.get(ctnr_number=container_number)
-    print(container_number)
+
     container.ctnr_active = '0'
     container.save()
+    return HttpResponse("GOOD")
+
+
+def delete_container(request):
+    container_number = request.POST.get("container_number")
+    container = containers.objects.get(ctnr_number=container_number)
+    container.delete()
 
     return HttpResponse("GOOD")

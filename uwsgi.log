@@ -1759,3 +1759,337 @@ invalid request block size: 21573 (max 4096)...skip
 invalid request block size: 21573 (max 4096)...skip
 <bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
 [pid: 7679|app: 0|req: 3/19] 127.0.0.1 () {40 vars in 675 bytes} [Fri May 29 15:29:44 2020] GET /staff_user/worktime/ => generated 3369 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7679|app: 0|req: 4/20] 192.168.1.73 () {40 vars in 698 bytes} [Fri May 29 15:46:52 2020] GET /homepage => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 115 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 5/21] 192.168.1.73 () {40 vars in 700 bytes} [Fri May 29 15:46:52 2020] GET /homepage/ => generated 7638 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 7677|app: 0|req: 4/22] 192.168.1.73 () {40 vars in 654 bytes} [Fri May 29 15:46:53 2020] GET /favicon.ico => generated 3307 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7679|app: 0|req: 6/23] 192.168.1.69 () {40 vars in 736 bytes} [Tue Jun  2 15:56:58 2020] GET /homepage/ => generated 7638 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 7679|app: 0|req: 7/24] 192.168.1.69 () {40 vars in 665 bytes} [Tue Jun  2 15:56:59 2020] GET /favicon.ico => generated 3307 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7677|app: 0|req: 5/25] 127.0.0.1 () {44 vars in 728 bytes} [Tue Jun  2 15:58:53 2020] GET / => generated 3253 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 10/26] 127.0.0.1 () {40 vars in 653 bytes} [Tue Jun  2 15:58:57 2020] GET /homepage/ => generated 7638 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7681|app: 0|req: 11/27] 127.0.0.1 () {42 vars in 717 bytes} [Tue Jun  2 15:59:01 2020] GET /staff_user/worktime/ => generated 3369 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 6/28] 127.0.0.1 () {48 vars in 866 bytes} [Tue Jun  2 15:59:04 2020] POST /staff_user/work/ => generated 53 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 108 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7679|app: 0|req: 8/29] 127.0.0.1 () {42 vars in 717 bytes} [Tue Jun  2 15:59:10 2020] GET /staff_user/worktime/ => generated 3369 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 12/30] 127.0.0.1 () {48 vars in 866 bytes} [Tue Jun  2 15:59:14 2020] POST /staff_user/work/ => generated 53 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 108 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 7/31] 192.168.1.69 () {42 vars in 793 bytes} [Tue Jun  2 16:10:15 2020] GET /warehouse/whhp/ => generated 5973 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 5/32] 192.168.1.69 () {42 vars in 823 bytes} [Tue Jun  2 17:11:05 2020] GET /warehouse/weeklychecksheet/ => generated 700 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 6/33] 192.168.1.69 () {42 vars in 817 bytes} [Tue Jun  2 17:11:09 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 13/34] 192.168.1.69 () {40 vars in 736 bytes} [Tue Jun  2 18:33:59 2020] GET /homepage/ => generated 7638 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 9/35] 192.168.1.69 () {42 vars in 817 bytes} [Tue Jun  2 18:34:22 2020] GET /staff_user/staffinformation => generated 5726 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 14/36] 192.168.1.69 () {42 vars in 811 bytes} [Tue Jun  2 18:34:29 2020] GET /warehouse/whhp/ => generated 5973 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7679|app: 0|req: 10/37] 192.168.1.69 () {42 vars in 817 bytes} [Tue Jun  2 18:34:38 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 15/38] 192.168.1.69 () {42 vars in 796 bytes} [Tue Jun  2 18:34:42 2020] GET /homepage/ => generated 7638 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7681|app: 0|req: 16/39] 192.168.1.69 () {42 vars in 803 bytes} [Tue Jun  2 18:34:43 2020] GET /staff_user/worktime/ => generated 3369 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 8/40] 192.168.1.69 () {42 vars in 811 bytes} [Tue Jun  2 18:34:50 2020] GET /adminandaccount/adminhp/ => generated 4932 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 7/41] 192.168.1.69 () {42 vars in 818 bytes} [Tue Jun  2 18:34:51 2020] GET /staff_user/register/ => generated 6292 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 9/42] 192.168.1.69 () {50 vars in 996 bytes} [Tue Jun  2 18:34:58 2020] POST /staff_user/register/ => generated 0 bytes in 75 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 17/43] 192.168.1.69 () {44 vars in 845 bytes} [Tue Jun  2 18:34:58 2020] GET /staff_user/register/ => generated 6353 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7676|app: 0|req: 8/44] 192.168.1.69 () {42 vars in 814 bytes} [Tue Jun  2 18:35:03 2020] GET /staff_user/worktime/ => generated 3369 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 10/45] 192.168.1.69 () {50 vars in 986 bytes} [Tue Jun  2 18:35:05 2020] POST /staff_user/work/ => generated 364 bytes in 81 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>, <staff: staff object (4)>]>>
+[pid: 7681|app: 0|req: 18/46] 192.168.1.69 () {42 vars in 811 bytes} [Tue Jun  2 18:35:07 2020] GET /staff_user/worktime/? => generated 3454 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7679|app: 0|req: 11/47] 192.168.1.69 () {50 vars in 987 bytes} [Tue Jun  2 18:35:13 2020] POST /staff_user/work/ => generated 317 bytes in 137 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7676|app: 0|req: 9/48] 192.168.1.69 () {42 vars in 811 bytes} [Tue Jun  2 18:35:15 2020] GET /staff_user/worktime/? => generated 3369 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 19/49] 192.168.1.69 () {42 vars in 828 bytes} [Tue Jun  2 18:35:44 2020] GET /staff_user/staffinformation => generated 5896 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 10/50] 192.168.1.69 () {42 vars in 845 bytes} [Tue Jun  2 18:35:56 2020] GET /warehouse/containerregisterpage/ => generated 22040 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 11/51] 192.168.1.69 () {42 vars in 820 bytes} [Tue Jun  2 18:36:02 2020] GET /setcompanystatus/ => generated 11653 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 20/52] 192.168.1.69 () {42 vars in 848 bytes} [Tue Jun  2 18:36:05 2020] GET /search-post?ClientSelected=BDIT+LIMITED => generated 11548 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 12/53] 192.168.1.69 () {42 vars in 811 bytes} [Tue Jun  2 18:36:07 2020] GET /homepage/ => generated 7638 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 13/54] 192.168.1.69 () {42 vars in 793 bytes} [Tue Jun  2 18:36:27 2020] GET /warehouse/whhp/ => generated 5973 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 11/55] 192.168.1.69 () {42 vars in 817 bytes} [Tue Jun  2 18:36:29 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 21/56] 192.168.1.69 () {42 vars in 796 bytes} [Tue Jun  2 18:37:02 2020] GET /homepage/ => generated 7638 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 14/57] 192.168.1.69 () {42 vars in 817 bytes} [Tue Jun  2 18:37:25 2020] GET /warehouse/weeklychecksheet/ => generated 700 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7677|app: 0|req: 15/58] 192.168.1.69 () {42 vars in 803 bytes} [Tue Jun  2 18:37:59 2020] GET /staff_user/worktime/ => generated 3369 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 12/59] 192.168.1.69 () {42 vars in 781 bytes} [Tue Jun  2 18:50:24 2020] GET /homepage/ => generated 7638 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 13/60] 192.168.1.69 () {40 vars in 736 bytes} [Wed Jun  3 14:42:08 2020] GET /homepage/ => generated 7638 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 7681|app: 0|req: 22/61] 192.168.1.69 () {40 vars in 665 bytes} [Wed Jun  3 14:42:14 2020] GET /favicon.ico => generated 3307 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 14/62] 192.168.1.69 () {42 vars in 827 bytes} [Wed Jun  3 14:48:42 2020] GET /warehouse/containerregisterpage/ => generated 22040 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 23/63] 192.168.1.69 () {42 vars in 827 bytes} [Wed Jun  3 14:48:52 2020] GET /warehouse/containerregisterpage/ => generated 22040 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+<QueryDict: {'csrfmiddlewaretoken': ['sy6LdigEzEQI2g6t11PHGfI65bLBdrXj1WOXWnbEZlOD2RsnyAFFhG0VsFhX1k8S'], 'ctnr_number': ['LLOU8628053'], 'ctnr_owner': ['FORWARDING - AUSLINK INTERNATIONAL'], 'ctnr_type': ['40FT'], 'ctnr_job': ['Devan and Delivery\r\n            '], 'ctnr_eta': ['2020-06-03']}>
+[pid: 7677|app: 0|req: 16/64] 192.168.1.69 () {50 vars in 1032 bytes} [Wed Jun  3 14:49:23 2020] POST /warehouse/container_upload_info/ => generated 5111 bytes in 96 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 12/65] 192.168.1.69 () {42 vars in 804 bytes} [Wed Jun  3 14:49:24 2020] GET /homepage/ => generated 8024 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7677|app: 0|req: 17/66] 192.168.1.69 () {42 vars in 803 bytes} [Wed Jun  3 15:01:46 2020] GET /staff_user/worktime/ => generated 3755 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7681|app: 0|req: 24/67] 127.0.0.1 () {40 vars in 635 bytes} [Wed Jun 10 17:12:50 2020] GET / => generated 3253 bytes in 31 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 7676|app: 0|req: 15/68] 127.0.0.1 () {38 vars in 562 bytes} [Wed Jun 10 17:12:51 2020] GET /favicon.ico => generated 3304 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 18/69] 127.0.0.1 () {40 vars in 653 bytes} [Wed Jun 10 17:12:55 2020] GET /homepage/ => generated 8024 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 7681|app: 0|req: 25/70] 127.0.0.1 () {38 vars in 562 bytes} [Wed Jun 10 17:12:55 2020] GET /favicon.ico => generated 3304 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 16/71] 127.0.0.1 () {42 vars in 707 bytes} [Wed Jun 10 17:13:00 2020] GET /warehouse/whhp/ => generated 6266 bytes in 65 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 7679|app: 0|req: 13/72] 127.0.0.1 () {38 vars in 562 bytes} [Wed Jun 10 17:13:00 2020] GET /favicon.ico => generated 3304 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 26/73] 127.0.0.1 () {42 vars in 737 bytes} [Wed Jun 10 17:13:02 2020] GET /clientdatabases/clientdbhp/ => generated 4931 bytes in 36 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 7681|app: 0|req: 27/74] 127.0.0.1 () {38 vars in 562 bytes} [Wed Jun 10 17:13:02 2020] GET /favicon.ico => generated 3304 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+<bound method QuerySet.exists of <QuerySet [<staff: staff object (2)>, <staff: staff object (3)>]>>
+[pid: 7681|app: 0|req: 28/75] 127.0.0.1 () {42 vars in 735 bytes} [Wed Jun 10 17:13:03 2020] GET /staff_user/worktime/ => generated 3755 bytes in 57 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 29/76] 127.0.0.1 () {42 vars in 713 bytes} [Thu Jun 11 13:20:24 2020] GET /homepage/ => generated 8024 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 7681|app: 0|req: 30/77] 127.0.0.1 () {38 vars in 562 bytes} [Thu Jun 11 13:20:24 2020] GET /favicon.ico => generated 3304 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 31/78] 127.0.0.1 () {42 vars in 725 bytes} [Thu Jun 11 13:20:28 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 92 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 19/79] 127.0.0.1 () {42 vars in 731 bytes} [Thu Jun 11 13:20:35 2020] GET /staff_user/staffinformation => generated 5896 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 20/80] 192.168.1.77 () {40 vars in 736 bytes} [Thu Jun 11 13:20:48 2020] GET /homepage/ => generated 8024 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 7676|app: 0|req: 17/81] 192.168.1.77 () {40 vars in 665 bytes} [Thu Jun 11 13:20:50 2020] GET /favicon.ico => generated 3307 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 21/82] 192.168.1.77 () {42 vars in 817 bytes} [Thu Jun 11 13:21:23 2020] GET /warehouse/weeklychecksheet/ => generated 700 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 18/83] 192.168.1.77 () {42 vars in 811 bytes} [Thu Jun 11 13:21:30 2020] GET /warehouse/warehouseinfo/ => generated 7971 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 22/84] 192.168.1.77 () {42 vars in 781 bytes} [Thu Jun 11 13:21:35 2020] GET /homepage/ => generated 8024 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 14/85] 192.168.1.77 () {42 vars in 811 bytes} [Thu Jun 11 13:21:37 2020] GET /adminandaccount/adminhp/ => generated 4932 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 32/86] 192.168.1.77 () {42 vars in 832 bytes} [Thu Jun 11 13:21:39 2020] GET /staff_user/staffinformation => generated 5896 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 23/87] 192.168.1.77 () {40 vars in 736 bytes} [Thu Jun 11 13:22:44 2020] GET /homepage/ => generated 8024 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 33/88] 192.168.1.77 () {42 vars in 817 bytes} [Thu Jun 11 13:23:08 2020] GET /clientdatabases/clientdbhp/ => generated 4931 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 24/89] 192.168.1.77 () {42 vars in 815 bytes} [Thu Jun 11 13:23:11 2020] GET /setcompanystatus/ => generated 11653 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 19/90] 192.168.1.77 () {42 vars in 848 bytes} [Thu Jun 11 13:23:16 2020] GET /search-post?ClientSelected=BDIT+LIMITED => generated 11548 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 20/91] 192.168.1.77 () {50 vars in 1011 bytes} [Thu Jun 11 13:23:17 2020] POST /app/change_onhold/ => generated 5976 bytes in 65 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 25/92] 192.168.1.77 () {42 vars in 790 bytes} [Thu Jun 11 13:23:22 2020] GET /homepage/ => generated 7932 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7679|app: 0|req: 15/93] 192.168.1.77 () {42 vars in 795 bytes} [Thu Jun 11 13:23:27 2020] GET /clientdataentry/ => generated 6148 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 16/94] 192.168.1.77 () {42 vars in 818 bytes} [Thu Jun 11 13:23:32 2020] GET /adminandaccount/adminhp/ => generated 4932 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 21/95] 192.168.1.77 () {42 vars in 832 bytes} [Thu Jun 11 13:23:34 2020] GET /staff_user/staffinformation => generated 5896 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 34/96] 192.168.1.77 () {42 vars in 821 bytes} [Thu Jun 11 13:23:35 2020] GET /staff_user/register/ => generated 6353 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 22/97] 192.168.1.77 () {42 vars in 792 bytes} [Thu Jun 11 13:35:14 2020] GET /homepage/ => generated 7932 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 23/98] 192.168.1.77 () {42 vars in 817 bytes} [Thu Jun 11 13:35:21 2020] GET /warehouse/weeklychecksheet/ => generated 700 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 35/99] 192.168.1.77 () {42 vars in 827 bytes} [Thu Jun 11 13:35:27 2020] GET /warehouse/containerregisterpage/ => generated 22095 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+OOLU8924991
+[pid: 7676|app: 0|req: 24/100] 192.168.1.77 () {48 vars in 892 bytes} [Thu Jun 11 13:35:38 2020] POST /warehouse/markjobdone/ => generated 4 bytes in 53 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 26/101] 192.168.1.77 () {48 vars in 912 bytes} [Thu Jun 11 13:35:42 2020] POST /warehouse/container_detail_ajax/ => generated 127 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+OOLU8628053
+[pid: 7676|app: 0|req: 25/102] 192.168.1.77 () {48 vars in 892 bytes} [Thu Jun 11 13:35:44 2020] POST /warehouse/markjobdone/ => generated 4 bytes in 67 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 17/103] 192.168.1.77 () {48 vars in 912 bytes} [Thu Jun 11 13:35:46 2020] POST /warehouse/container_detail_ajax/ => generated 113 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+MRKU9226498
+[pid: 7677|app: 0|req: 27/104] 192.168.1.77 () {48 vars in 892 bytes} [Thu Jun 11 13:35:48 2020] POST /warehouse/markjobdone/ => generated 4 bytes in 43 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 0)
+[pid: 7679|app: 0|req: 18/105] 192.168.1.77 () {48 vars in 912 bytes} [Thu Jun 11 13:35:50 2020] POST /warehouse/container_detail_ajax/ => generated 128 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 0)
+LLOU8628053
+[pid: 7677|app: 0|req: 28/106] 192.168.1.77 () {48 vars in 892 bytes} [Thu Jun 11 13:35:51 2020] POST /warehouse/markjobdone/ => generated 4 bytes in 43 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 36/107] 192.168.1.77 () {42 vars in 804 bytes} [Thu Jun 11 13:35:53 2020] GET /homepage/ => generated 6790 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 29/108] 192.168.1.77 () {42 vars in 827 bytes} [Thu Jun 11 13:35:56 2020] GET /warehouse/containerregisterpage/ => generated 22095 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+<QueryDict: {'csrfmiddlewaretoken': ['E9LPFvERkiYXjAnElH4RkfJD5qIu1vJv0k5gYphp6JJrjHX0qyaVAERfFoHrifYA'], 'ctnr_number': ['DERU8001830'], 'ctnr_owner': ['Malcom total Logistics'], 'ctnr_type': ['20FT'], 'ctnr_job': ['ATF\r\n            '], 'ctnr_eta': ['2020-06-11']}>
+[pid: 7676|app: 0|req: 26/109] 192.168.1.77 () {50 vars in 1032 bytes} [Thu Jun 11 13:36:23 2020] POST /warehouse/container_upload_info/ => generated 5111 bytes in 55 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 30/110] 192.168.1.77 () {42 vars in 816 bytes} [Thu Jun 11 13:36:25 2020] GET /warehouse/whhp/ => generated 6533 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 27/111] 192.168.1.77 () {42 vars in 787 bytes} [Thu Jun 11 13:36:27 2020] GET /homepage/ => generated 7150 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 31/112] 192.168.1.77 () {42 vars in 793 bytes} [Thu Jun 11 13:36:30 2020] GET /warehouse/whhp/ => generated 6533 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7679|app: 0|req: 19/113] 192.168.1.77 () {42 vars in 833 bytes} [Thu Jun 11 13:36:31 2020] GET /warehouse/containerregisterpage/ => generated 22150 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+<QueryDict: {'csrfmiddlewaretoken': ['bxaL5c4M8YAcJl38ScKV1Nq9AZHB7rrbTFM2CmaU3RjRmbBURUsuBJHG7k1vnnEY'], 'ctnr_number': ['UNIU2042716'], 'ctnr_owner': ['FORWARDING - AUSLINK INTERNATIONAL'], 'ctnr_type': ['20FT'], 'ctnr_job': ['devan and delivery'], 'ctnr_eta': ['']}>
+Internal Server Error: /warehouse/container_upload_info/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./warehouse/views.py", line 25, in container_upload_info
+    container.save()
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1273, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1268, in get_prep_value
+    return self.to_python(value)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1243, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ["'' value has an invalid date format. It must be in YYYY-MM-DD format."]
+[pid: 7677|app: 0|req: 32/114] 192.168.1.77 () {50 vars in 1032 bytes} [Thu Jun 11 13:36:59 2020] POST /warehouse/container_upload_info/ => generated 132867 bytes in 230 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)
+<QueryDict: {'csrfmiddlewaretoken': ['bxaL5c4M8YAcJl38ScKV1Nq9AZHB7rrbTFM2CmaU3RjRmbBURUsuBJHG7k1vnnEY'], 'ctnr_number': ['UNIU2042716'], 'ctnr_owner': ['FORWARDING - AUSLINK INTERNATIONAL'], 'ctnr_type': ['20FT'], 'ctnr_job': ['devan and delivery'], 'ctnr_eta': ['2020-06-11']}>
+[pid: 7681|app: 0|req: 37/115] 192.168.1.77 () {50 vars in 1032 bytes} [Thu Jun 11 13:37:06 2020] POST /warehouse/container_upload_info/ => generated 5111 bytes in 79 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 20/116] 192.168.1.77 () {42 vars in 816 bytes} [Thu Jun 11 13:37:07 2020] GET /warehouse/whhp/ => generated 6813 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 33/117] 192.168.1.77 () {42 vars in 833 bytes} [Thu Jun 11 13:37:09 2020] GET /warehouse/containerregisterpage/ => generated 22205 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+<QueryDict: {'csrfmiddlewaretoken': ['APKfoP264fyTCa1t2iB9KGL1cKZNrORXNbtXO18siZ4zUuh0l6rSGGBT2viD3TqL'], 'ctnr_number': ['TEMU3362190'], 'ctnr_owner': ['FORWARDING - AUSLINK INTERNATIONAL'], 'ctnr_type': ['20FT'], 'ctnr_job': ['Devan and delivery\r\n            '], 'ctnr_eta': ['2020-06-11']}>
+[pid: 7679|app: 0|req: 21/118] 192.168.1.77 () {50 vars in 1032 bytes} [Thu Jun 11 13:37:30 2020] POST /warehouse/container_upload_info/ => generated 5111 bytes in 74 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 34/119] 192.168.1.77 () {42 vars in 816 bytes} [Thu Jun 11 13:37:31 2020] GET /warehouse/whhp/ => generated 7107 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 38/120] 192.168.1.77 () {42 vars in 787 bytes} [Thu Jun 11 13:37:32 2020] GET /homepage/ => generated 7910 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7679|app: 0|req: 22/121] 192.168.1.77 () {42 vars in 827 bytes} [Thu Jun 11 16:22:33 2020] GET /warehouse/containerregisterpage/ => generated 22260 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 39/122] 192.168.1.77 () {48 vars in 912 bytes} [Thu Jun 11 16:22:37 2020] POST /warehouse/container_detail_ajax/ => generated 101 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+DERU8001830
+[pid: 7681|app: 0|req: 40/123] 192.168.1.77 () {48 vars in 892 bytes} [Thu Jun 11 16:22:40 2020] POST /warehouse/markjobdone/ => generated 4 bytes in 52 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 0)
+[pid: 7676|app: 0|req: 28/124] 192.168.1.77 () {42 vars in 804 bytes} [Thu Jun 11 16:22:51 2020] GET /homepage/ => generated 7550 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 41/125] 127.0.0.1 () {40 vars in 653 bytes} [Thu Jun 11 17:56:11 2020] GET /homepage/ => generated 7550 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 7681|app: 0|req: 42/126] 127.0.0.1 () {38 vars in 562 bytes} [Thu Jun 11 17:56:12 2020] GET /favicon.ico => generated 3304 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 35/127] 127.0.0.1 () {42 vars in 711 bytes} [Thu Jun 11 17:57:19 2020] GET /setcompanystatus/ => generated 11585 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 36/128] 127.0.0.1 () {42 vars in 746 bytes} [Thu Jun 11 17:57:20 2020] GET /search-post?ClientSelected=name => generated 11513 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7681|app: 0|req: 43/129] 127.0.0.1 () {42 vars in 794 bytes} [Thu Jun 11 17:57:30 2020] GET /search-post?ClientSelected=YOYOSO+Main+Store+LTD => generated 11570 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 44/130] 127.0.0.1 () {48 vars in 900 bytes} [Thu Jun 11 17:57:31 2020] POST /app/change_onhold/ => generated 5985 bytes in 114 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 23/131] 127.0.0.1 () {42 vars in 704 bytes} [Thu Jun 11 17:57:33 2020] GET /homepage/ => generated 7449 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 45/132] 127.0.0.1 () {42 vars in 707 bytes} [Thu Jun 11 17:57:37 2020] GET /warehouse/whhp/ => generated 7107 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 46/133] 127.0.0.1 () {42 vars in 713 bytes} [Thu Jun 11 17:57:42 2020] GET /warehouse/whhp/ => generated 7107 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7679|app: 0|req: 24/134] 127.0.0.1 () {42 vars in 701 bytes} [Thu Jun 11 17:58:00 2020] GET /homepage/ => generated 7449 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 7676|app: 0|req: 29/135] 127.0.0.1 () {42 vars in 741 bytes} [Thu Jun 11 17:58:07 2020] GET /warehouse/containerregisterpage/ => generated 22260 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 37/136] 127.0.0.1 () {48 vars in 873 bytes} [Thu Jun 11 17:58:16 2020] POST /warehouse/container_detail_ajax/ => generated 113 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 47/137] 127.0.0.1 () {42 vars in 718 bytes} [Thu Jun 11 17:58:35 2020] GET /homepage/ => generated 7449 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 7681|app: 0|req: 48/138] 127.0.0.1 () {42 vars in 741 bytes} [Thu Jun 11 18:02:15 2020] GET /warehouse/containerregisterpage/ => generated 22260 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 38/139] 127.0.0.1 () {48 vars in 873 bytes} [Thu Jun 11 18:06:45 2020] POST /warehouse/container_detail_ajax/ => generated 113 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 7677|app: 0|req: 39/140] 127.0.0.1 () {48 vars in 873 bytes} [Thu Jun 11 18:06:47 2020] POST /warehouse/container_detail_ajax/ => generated 101 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 7677|app: 0|req: 40/141] 127.0.0.1 () {48 vars in 873 bytes} [Thu Jun 11 18:06:49 2020] POST /warehouse/container_detail_ajax/ => generated 112 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Jun 29 09:33:33 2020] ***
+compiled with version: 7.5.0 on 29 May 2020 01:03:58
+os: Linux-5.3.0-59-generic #53~18.04.1-Ubuntu SMP Thu Jun 4 14:58:26 UTC 2020
+nodename: brown-HP-Compaq-Elite-8300-SFF
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/brown/PycharmProjects/auslinkerp
+writing pidfile to uwsgi.pid
+detected binary path: /home/brown/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/brown/PycharmProjects/auslinkerp
+your processes number limit is 31154
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Python main interpreter initialized at 0x564b86fe4290
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x564b86fe4290 pid: 1920 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1920)
+spawned uWSGI worker 1 (pid: 1922, cores: 2)
+spawned uWSGI worker 2 (pid: 1923, cores: 2)
+spawned uWSGI worker 3 (pid: 1925, cores: 2)
+spawned uWSGI worker 4 (pid: 1927, cores: 2)
+[pid: 1925|app: 0|req: 1/1] 192.168.1.68 () {40 vars in 737 bytes} [Mon Jun 29 09:34:41 2020] GET /homepage/ => generated 7449 bytes in 3558 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1927|app: 0|req: 1/2] 192.168.1.68 () {42 vars in 828 bytes} [Mon Jun 29 09:34:58 2020] GET /warehouse/containerregisterpage/ => generated 22311 bytes in 537 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /3000
+[pid: 1927|app: 0|req: 2/3] 127.0.0.1 () {40 vars in 643 bytes} [Mon Jun 29 09:44:53 2020] GET /3000 => generated 3283 bytes in 58 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 1927|app: 0|req: 3/4] 127.0.0.1 () {38 vars in 562 bytes} [Mon Jun 29 09:44:53 2020] GET /favicon.ico => generated 3304 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /3000/homepage
+[pid: 1923|app: 0|req: 1/5] 127.0.0.1 () {40 vars in 661 bytes} [Mon Jun 29 09:45:00 2020] GET /3000/homepage => generated 3310 bytes in 292 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 1925|app: 0|req: 2/6] 127.0.0.1 () {38 vars in 562 bytes} [Mon Jun 29 09:45:00 2020] GET /favicon.ico => generated 3304 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /3000/homepages
+[pid: 1922|app: 0|req: 1/7] 127.0.0.1 () {40 vars in 663 bytes} [Mon Jun 29 09:45:03 2020] GET /3000/homepages => generated 3313 bytes in 292 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /homepage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 28, in homepage
+    return render(request, 'homepage.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'information' is not a registered namespace
+[pid: 1927|app: 0|req: 4/8] 192.168.1.68 () {42 vars in 805 bytes} [Mon Jun 29 10:32:06 2020] GET /homepage/ => generated 185117 bytes in 151 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)
+Internal Server Error: /homepage/
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 28, in homepage
+    return render(request, 'homepage.html', context=context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brown/.local/lib/python3.6/site-packages/django/urls/base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'information' is not a registered namespace
+[pid: 1923|app: 0|req: 2/9] 192.168.1.68 () {40 vars in 737 bytes} [Mon Jun 29 10:44:19 2020] GET /homepage/ => generated 184939 bytes in 378 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)

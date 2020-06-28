@@ -8,11 +8,11 @@
     <script src="/static/js/common.js"></script>
 
     <meta charset="UTF-8">
-    <title>AUSLINK WORK TIME MANAGEMENT</title>
+    <title>Containers</title>
     <style>
         body {
             margin: 0 auto;
-            width: 60em;
+            width: 80em;
         }
 
         h1 {
@@ -26,53 +26,66 @@
 
 
     </style>
-</head>
-<body>
+    <script type="text/javascript">
 
-<h3> Welcome To the login page</h3>
+
+        refresh=()=>{
+            console.log('xxx')
+               setTimeout(()=>{
+                  location.reload(true);
+               },900000)
+
+    }
+
+
+    </script>
+</head>
+<body onload=refresh()>
+
+<h3> Container Scheduling</h3>
 <h4>{{h3title}}</h4>
 
-<div class="ui red message" id="release">
-    <div class="header">
-        <h3>Service STOP list! DO NOT RELEASE GOODS!</h3>
-    </div>
-    <ul class="list"> {% for item in company %}
-        <li style="font-size: medium"> {{item.c_name}}
-            <hr>
-        </li>
-        {% endfor %}
+<!--<div class="ui red message" id="release">-->
+<!--    <div class="header">-->
+<!--        <h3>Service STOP list! DO NOT RELEASE GOODS!</h3>-->
+<!--    </div>-->
+<!--    <ul class="list"> {% for item in company %}-->
+<!--        <li style="font-size: medium"> {{item.c_name}}-->
+<!--            <hr>-->
+<!--        </li>-->
+<!--        {% endfor %}-->
 
-    </ul>
-    <strong>{{suspend_client.c_name}}<strong>{{message}}</strong></strong>
-</div>
+<!--    </ul>-->
+<!--    <strong>{{suspend_client.c_name}}<strong>{{message}}</strong></strong>-->
+<!--</div>-->
 
-<div class="ui message" id="staff">
-    <div class="header">
-        <h3>Staff on Site Now</h3>
-    </div>
-    <ul>{% for staff in working%}
-        <li><strong style="color: #2ca02c">{{staff.s_name}} </strong>is on site!</li>
-        {% endfor %}
-    </ul>
-</div>
+<!--<div class="ui message" id="staff">-->
+<!--    <div class="header">-->
+<!--        <h3>Staff on Site Now</h3>-->
+<!--    </div>-->
+<!--    <ul>{% for staff in working%}-->
+<!--        <li><strong style="color: #2ca02c">{{staff.s_name}} </strong>is on site!</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--</div>-->
 
 
-</div id='mobile'>
-<h4>Please enter your mobile number and submit</h4>
+<!--</div id='mobile'>-->
+<!--<h4>Please enter your mobile number and submit</h4>-->
 
-<form action="{% url 'staff_user:startwork'%}" method="post">
-    <input name="mobile_number" type="text">
-    <button type="submit">Click to Start or STOP</button>
-</form>
+<!--<form action="{% url 'staff_user:startwork'%}" method="post">-->
+<!--    <input name="mobile_number" type="text">-->
+<!--    <button type="submit">Click to Start or STOP</button>-->
+<!--</form>-->
 
 <div class="ui message">
-    <div class="header">
-        <h3>Container schedule</h3>
-    </div>
+<!--    <div class="header">-->
+<!--        <h3>Container schedule</h3>-->
+<!--    </div>-->
 
 
     <ul class="list"> {% for item in container|dictsort:'ctnr_eta' %}
-        <li style="font-size: medium"><p> ETA to Yard&nbsp;&nbsp:&nbsp;&nbsp<strong>{{ item.ctnr_eta}}</strong>&nbsp;&nbsp;&nbsp
+        <li style="font-size: medium"><p> ETA to Yard&nbsp;&nbsp:&nbsp;&nbsp<strong style="color: #2ca02c">{{ item.ctnr_eta}}</strong>&nbsp;&nbsp;&nbsp
             {{item.ctnr_number}} &nbsp;&nbsp;&nbsp;&nbsp({{item.ctnr_type}})&nbsp;&nbsp;&nbsp;&nbsp{{item.ctnr_owner}}
             &nbsp;&nbsp;&nbsp;&nbsp JOB&nbsp;&nbsp;:&nbsp {{item.ctnr_job}}&nbsp;&nbsp;&nbsp{{item.ctnr_special}}</p>
             <hr>
@@ -82,15 +95,15 @@
 </div>
 
 
-<div class="ui message">
-    <div class="header">
-        <h3>Incoming Shipment</h3>
-    </div>
-    <ul class="list"> {% for item in incoming_shipment %}
-        <li style="font-size: x-large"> {{item.clientCompanyName}}</li>
-        {% endfor %}
-    </ul>
-</div>
+<!--<div class="ui message">-->
+<!--    <div class="header">-->
+<!--        <h3>Incoming Shipment</h3>-->
+<!--    </div>-->
+<!--    <ul class="list"> {% for item in incoming_shipment %}-->
+<!--        <li style="font-size: x-large"> {{item.clientCompanyName}}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--</div>-->
 
 </body>
 </html>

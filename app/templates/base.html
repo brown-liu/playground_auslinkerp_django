@@ -21,7 +21,7 @@
 
     </style>
 </head>
-<body onload="startTime()">
+<body onload="startTime()" style="display: flow">
 
 <div class="ui menu" id="menumain">
     <font color="#8b0000"><span id="nowDateTimeSpan"></span></font>
@@ -73,7 +73,7 @@
         <!--        </a>-->
         <!----------------------------------------------Forwarding------------------------------------------------------------->
         <div class="ui simple dropdown item">
-            <a href="{% url 'staff_user:worktime' %}" target="_blank"> Clock in and Clock Out</a>
+            <a href="{% url 'staff_user:worktime' %}" target="_blank"> Container Scheduling</a>
             <!--            <i class="dropdown icon" ></i>-->
             <!--            <div class="menu">-->
             <!--                <div class="header">Categories</div>-->
@@ -89,24 +89,49 @@
             <!--                <div class="item">Bedroom</div>-->
         </div>
     </div>
-    <!--------------------------------------------------Admin & Account---------------------------------------------------->
-
-
+    <!--------------------------------------------------------Informations----------------------------->
     <div class="ui simple dropdown item">
-        <a href="{% url 'adminhp' %}"> Admin & Account</a>
+        <a> Information</a>
         <i class="dropdown icon"></i>
         <div class="menu">
             <div class="header">Categories</div>
-            <div class="item"><a href="{% url 'staff_user:staff_information'%}">Staff Information</a></div>
-            <!--                <div class="item">Bedroom</div>-->
             <div class="item">
-                <!--                    <i class="dropdown icon"></i>-->
-                <span class="text"><a href="{% url 'staff_user:register' %}">Staff Register</a></span>
+                <i class="dropdown icon"></i>
+                <span class="text">Training Material</span>
+                <div class="menu">
+                    <div class="header">
+                        <a href="{% url 'information:training_forwarding' %}">
+                            Forwarding Training
+                        </a>
+                    </div>
 
+                    <div class="header">
+                        <a href="{% url 'information:training_logistics' %}">
+                            Logistics Training
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div >
+        </div>
+        <!--------------------------------------------------Admin & Account---------------------------------------------------->
+
+
+        <div class="ui simple dropdown item">
+            <a href="{% url 'adminhp' %}"> Admin & Account</a>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="header">Categories</div>
+                <div class="item"><a href="{% url 'staff_user:staff_information'%}">Staff Information</a></div>
+                <!--                <div class="item">Bedroom</div>-->
+                <div class="item">
+                    <!--                    <i class="dropdown icon"></i>-->
+                    <span class="text"><a href="{% url 'staff_user:register' %}">Staff Register</a></span>
+
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 </div>
